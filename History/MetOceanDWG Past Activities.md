@@ -6,7 +6,7 @@
 
   - Chairs: Chris Little (UK Met Office) and Steve Olson (NOAA/NWS)
   - Email Group List: Subscribe to the public email list at : https://lists.opengeospatial.org/mailman/listinfo/meteo.dwg)
-  - [Charter:](https://github.com/opengeospatial/MetOceanDWG/blob/main/History/09-DRAFT_MeteorologyOceanography_DWG_Charter.doc)
+  - [MetOcean DWG Charter:](https://github.com/opengeospatial/MetOceanDWG/blob/main/History/09-DRAFT_MeteorologyOceanography_DWG_Charter.doc)
 ## WMS 1.3
   - [WMS 1.3 Best Practice for Ensemble data](https://external.ogc.org/twiki_public/pub/MetOceanDWG/WebHome/16-086r2_OGC_Best_Practice_for_using_Web_Map_Services_WMS_with_Ensembles_of_Forecast_Data.doc)
   - [WMS 1.3 Best Practice OGC Best Practice for using Web Map Services (WMS) with Time-Dependent or Elevation-Dependent Data (1.0)](https://portal.opengeospatial.org/files/?artifact_id=56394)
