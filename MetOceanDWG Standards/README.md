@@ -7,3 +7,9 @@
   - OGC API - EDR
   - OGC API - Records
   - OGC API - Processes
+
+# Other standards groups MetOceanDWG is coordinating/collaborating with
+  - W3C
+  - WMO
+  - ISO
+  - OASIS/ITU
