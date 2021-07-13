@@ -1,7 +1,7 @@
 # MetOceanDWG
-Public Repository for OGC MetOcean Domain Working Group
+Public Repository for OGC MetOcean Domain Working Group (This is a work in progress!)
 
-This is a work in progress!
+[MetOcean DWG Charter](https://github.com/opengeospatial/MetOceanDWG/blob/main/09-DRAFT_MeteorologyOceanography_DWG_Charter.doc)
 
 See the wiki about:
 
