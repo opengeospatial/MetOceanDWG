@@ -2,12 +2,6 @@
 
 [The MetOcean DWG Past Activities will be copied from existing twiki](https://external.ogc.org/twiki_public/MetOceanDWG)
 
-## MetOceanDWG Specifics
-
-  - Chairs: Chris Little (UK Met Office) and Steve Olson (NOAA/NWS)
-  - Email Group List: Subscribe to the public email list at : https://lists.opengeospatial.org/mailman/listinfo/meteo.dwg)
-  - [MetOcean DWG Charter](https://github.com/opengeospatial/MetOceanDWG/blob/main/History/09-DRAFT_MeteorologyOceanography_DWG_Charter.doc)
-
 ## Environmental Data Retrieval (EDR) API
 
   - [Sprints](https://github.com/opengeospatial/MetOceanDWG/tree/main/History/Sprints)
