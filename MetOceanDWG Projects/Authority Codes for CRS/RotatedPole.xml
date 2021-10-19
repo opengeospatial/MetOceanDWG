@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:DerivedCRS
+  xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd"
+  xmlns:xsi          = "http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml          = "http://www.opengis.net/gml/3.2"
+  xmlns:gmd          = "http://www.isotc211.org/2005/gmd"
+  xmlns:gco          = "http://www.isotc211.org/2005/gco"
+  xmlns:xlink        = "http://www.w3.org/1999/xlink"
+  gml:id="cosmo-crs-101">
+  <gml:identifier codeSpace="COSMO">urn:ogc:def:crs:COSMO::101</gml:identifier>
+  <gml:name codeSpace="COSMO">COSMO reference system</gml:name>
+  <gml:remarks>Tentative CRS definition. May change in any future version.</gml:remarks>
+  <gml:domainOfValidity>
+    <gmd:EX_Extent>
+      <gmd:description>
+        <gco:CharacterString>Park of (TODO).</gco:CharacterString>
+      </gmd:description>
+      <gmd:geographicElement>
+        <gmd:EX_GeographicBoundingBox>
+            <gmd:extentTypeCode>
+              <gco:Boolean>true</gco:Boolean>
+            </gmd:extentTypeCode>
+            <gmd:westBoundLongitude>
+              <gco:Decimal>10</gco:Decimal>         <!-- TODO -->
+            </gmd:westBoundLongitude>
+            <gmd:eastBoundLongitude>
+              <gco:Decimal>80</gco:Decimal>         <!-- TODO -->
+            </gmd:eastBoundLongitude>
+            <gmd:southBoundLatitude>
+              <gco:Decimal>40</gco:Decimal>         <!-- TODO -->
+            </gmd:southBoundLatitude>
+            <gmd:northBoundLatitude>
+              <gco:Decimal>60</gco:Decimal>         <!-- TODO -->
+            </gmd:northBoundLatitude>
+        </gmd:EX_GeographicBoundingBox>
+      </gmd:geographicElement>
+    </gmd:EX_Extent>
+  </gml:domainOfValidity>
+  <gml:scope>Specific to COSMO project.</gml:scope>     <!-- TODO -->
+  <gml:conversion>
+    <gml:Conversion gml:id="RotatedLatLon">
+      <gml:identifier codeSpace="COSMO">urn:ogc:def:coordinateOperation:COSMO::100</gml:identifier>
+      <gml:name codeSpace="COSMO">Rotated Latitude Longitude</gml:name>
+      <gml:scope>Specific to COSMO project.</gml:scope>                                     <!-- TODO -->
+      <gml:method>
+        <gml:OperationMethod gml:id="PoleRotation">
+          <gml:identifier codeSpace="WMO">urn:ogc:def:method:WMO:2019:3.1</gml:identifier>  <!-- TODO (WMO) -->
+          <gml:name codeSpace="WMO">Pole Rotation</gml:name>
+          <gml:formula>See WMO. Manual on Codes. No. 306, volume 1.2, parts B and C.</gml:formula>
+          <gml:sourceDimensions>2</gml:sourceDimensions>
+          <gml:targetDimensions>2</gml:targetDimensions>
+          <!--
+            TODO: See WMO.md for a definition of parameters.
+            The parameters below do not match exactly the definitions of WMO template 3.1.
+          -->
+          <gml:parameter>
+            <gml:OperationParameter gml:id="PoleLatitude">
+              <gml:identifier codeSpace="WMO">urn:ogc:def:parameter:WMO::TODO</gml:identifier>
+              <gml:name codeSpace="WMO">Latitude of rotated pole</gml:name>
+            </gml:OperationParameter>
+          </gml:parameter>
+          <gml:parameter>
+            <gml:OperationParameter gml:id="PoleLongitude">
+              <gml:identifier codeSpace="WMO">urn:ogc:def:parameter:WMO::TODO</gml:identifier>
+              <gml:name codeSpace="WMO">Longitude of rotated pole</gml:name>
+            </gml:OperationParameter>
+          </gml:parameter>
+          <gml:parameter>
+            <gml:OperationParameter gml:id="AxisRotation">
+              <gml:identifier codeSpace="WMO">urn:ogc:def:parameter:WMO::TODO</gml:identifier>
+              <gml:name codeSpace="WMO">Axis rotation</gml:name>
+            </gml:OperationParameter>
+          </gml:parameter>
+        </gml:OperationMethod>
+      </gml:method>
+      <gml:parameterValue>
+        <gml:ParameterValue>
+          <gml:value uom="urn:ogc:def:uom:EPSG::9102">40.0</gml:value>                      <!-- TODO -->
+          <gml:operationParameter xlink:href="#PoleLatitude"></gml:operationParameter>
+        </gml:ParameterValue>
+      </gml:parameterValue>
+      <gml:parameterValue>
+        <gml:ParameterValue>
+          <gml:value uom="urn:ogc:def:uom:EPSG::9102">-170.0</gml:value>                    <!-- TODO -->
+          <gml:operationParameter xlink:href="#PoleLongitude"></gml:operationParameter>
+        </gml:ParameterValue>
+      </gml:parameterValue>
+      <gml:parameterValue>
+        <gml:ParameterValue>
+          <gml:value uom="urn:ogc:def:uom:EPSG::9102">10.0</gml:value>                      <!-- TODO -->
+          <gml:operationParameter xlink:href="#AxisRotation"></gml:operationParameter>
+        </gml:ParameterValue>
+      </gml:parameterValue>
+    </gml:Conversion>
+  </gml:conversion>
+  <gml:baseCRS>
+    <gml:GeodeticCRS gml:id="cosmo-crs-100">
+      <gml:identifier codeSpace="COSMO">urn:ogc:def:crs:COSMO::100</gml:identifier>
+      <gml:name codeSpace="COSMO">COSMO base geodetic CRS</gml:name>
+      <gml:scope>Specific to COSMO project.</gml:scope>
+      <gml:ellipsoidalCS>
+        <gml:EllipsoidalCS gml:id="epsg-cs-6422">
+          <gml:identifier codeSpace="IOGP">urn:ogc:def:cs:EPSG:9.9.1:6422</gml:identifier>
+          <gml:name>Ellipsoidal CS: East (°), North (°).</gml:name>
+          <gml:axis>
+            <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="epsg-axis-106">
+              <gml:identifier codeSpace="IOGP">urn:ogc:def:axis:EPSG:9.9.1:106</gml:identifier>
+              <gml:name codeSpace="EPSG:9.9.1">Geodetic latitude</gml:name>
+              <gml:axisAbbrev>φ</gml:axisAbbrev>
+              <gml:axisDirection codeSpace="ISO">north</gml:axisDirection>
+              <gml:minimumValue>-90.0</gml:minimumValue>
+              <gml:maximumValue>90.0</gml:maximumValue>
+              <gml:rangeMeaning codeSpace="ISO">exact</gml:rangeMeaning>
+            </gml:CoordinateSystemAxis>
+          </gml:axis>
+          <gml:axis>
+            <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="epsg-axis-107">
+              <gml:identifier codeSpace="IOGP">urn:ogc:def:axis:EPSG:9.9.1:107</gml:identifier>
+              <gml:name codeSpace="EPSG:9.9.1">Geodetic longitude</gml:name>
+              <gml:axisAbbrev>λ</gml:axisAbbrev>
+              <gml:axisDirection codeSpace="ISO">east</gml:axisDirection>
+              <gml:minimumValue>-180.0</gml:minimumValue>
+              <gml:maximumValue>180.0</gml:maximumValue>
+              <gml:rangeMeaning codeSpace="ISO">wraparound</gml:rangeMeaning>
+            </gml:CoordinateSystemAxis>
+          </gml:axis>
+        </gml:EllipsoidalCS>
+      </gml:ellipsoidalCS>
+      <gml:geodeticDatum>
+        <gml:GeodeticDatum gml:id="COSMOKugel">
+          <gml:identifier codeSpace="COSMOS">urn:ogc:def:datum:COSMO::100</gml:identifier>
+          <gml:name>COSMO Kugel</gml:name>
+          <gml:scope>Specific to COSMO project.</gml:scope>
+          <gml:primeMeridian>
+            <gml:PrimeMeridian gml:id="epsg-meridian-8901">
+              <gml:identifier codeSpace="IOGP">urn:ogc:def:meridian:EPSG::8901</gml:identifier>
+              <gml:name>Greenwich</gml:name>
+              <gml:greenwichLongitude uom="urn:ogc:def:uom:EPSG::9102">0.0</gml:greenwichLongitude>
+            </gml:PrimeMeridian>
+          </gml:primeMeridian>
+          <gml:ellipsoid>
+            <gml:Ellipsoid gml:id="Erdkugel">
+              <gml:identifier codeSpace="COSMOS">urn:ogc:def:ellipsoid:COSMO::100</gml:identifier>
+              <gml:name>Erdkugel</gml:name>
+              <gml:semiMajorAxis uom="urn:ogc:def:uom:EPSG::9001">6371229.0</gml:semiMajorAxis>
+              <gml:secondDefiningParameter>
+                <gml:SecondDefiningParameter>
+                  <gml:isSphere>true</gml:isSphere>
+                </gml:SecondDefiningParameter>
+              </gml:secondDefiningParameter>
+            </gml:Ellipsoid>
+          </gml:ellipsoid>
+        </gml:GeodeticDatum>
+      </gml:geodeticDatum>
+    </gml:GeodeticCRS>
+  </gml:baseCRS>
+  <gml:derivedCRSType codeSpace="ISO">GeodeticCRS</gml:derivedCRSType>
+  <gml:coordinateSystem>
+    <gml:EllipsoidalCS gml:id="rotated-CS">
+      <gml:identifier codeSpace="COSMO">urn:ogc:def:cs:COSMO::101</gml:identifier>
+      <gml:name>Ellipsoidal rotated CS.</gml:name>
+      <gml:axis>
+        <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="rotated-latitude">
+          <gml:identifier codeSpace="COSMO">urn:ogc:def:axis:COSMO::101</gml:identifier>
+          <gml:name>Rotated latitude</gml:name>
+          <gml:axisAbbrev>φ</gml:axisAbbrev>
+          <gml:axisDirection codeSpace="COSMO">north</gml:axisDirection>
+          <gml:minimumValue>-90.0</gml:minimumValue>
+          <gml:maximumValue>90.0</gml:maximumValue>
+          <gml:rangeMeaning codeSpace="ISO">exact</gml:rangeMeaning>
+        </gml:CoordinateSystemAxis>
+      </gml:axis>
+      <gml:axis>
+        <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="rotated-longitude">
+          <gml:identifier codeSpace="COSMO">urn:ogc:def:axis:COSMO::102</gml:identifier>
+          <gml:name>Rotated longitude</gml:name>
+          <gml:axisAbbrev>λ</gml:axisAbbrev>
+          <gml:axisDirection codeSpace="COSMO">east</gml:axisDirection>
+          <gml:minimumValue>-180.0</gml:minimumValue>
+          <gml:maximumValue>180.0</gml:maximumValue>
+          <gml:rangeMeaning codeSpace="ISO">exact</gml:rangeMeaning>
+        </gml:CoordinateSystemAxis>
+      </gml:axis>
+    </gml:EllipsoidalCS>
+  </gml:coordinateSystem>
+</gml:DerivedCRS>
