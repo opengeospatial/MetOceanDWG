@@ -44,50 +44,46 @@
       <gml:scope>Specific to COSMO project.</gml:scope>                                     <!-- TODO -->
       <gml:method>
         <gml:OperationMethod gml:id="PoleRotation">
-          <gml:identifier codeSpace="WMO">urn:ogc:def:method:WMO:2019:3.1</gml:identifier>  <!-- TODO (WMO) -->
-          <gml:name codeSpace="WMO">Pole Rotation</gml:name>
-          <gml:formula>See WMO. Manual on Codes. No. 306, volume 1.2, parts B and C.</gml:formula>
+          <gml:identifier codeSpace="COSMO">urn:ogc:def:method:COSMO::100</gml:identifier>
+          <gml:name codeSpace="COSMO">Pole rotation (netCDF CF convention)</gml:name>
+          <gml:formula>See netCDF-CF conventions, section "Rotated Pole".</gml:formula>
           <gml:sourceDimensions>2</gml:sourceDimensions>
           <gml:targetDimensions>2</gml:targetDimensions>
-          <!--
-            TODO: See WMO.md for a definition of parameters.
-            The parameters below do not match exactly the definitions of WMO template 3.1.
-          -->
           <gml:parameter>
             <gml:OperationParameter gml:id="PoleLatitude">
-              <gml:identifier codeSpace="WMO">urn:ogc:def:parameter:WMO::TODO</gml:identifier>
-              <gml:name codeSpace="WMO">Latitude of rotated pole</gml:name>
+              <gml:identifier codeSpace="COSMO">urn:ogc:def:parameter:COSMO::101</gml:identifier>
+              <gml:name codeSpace="COSMO">Grid north pole latitude</gml:name>
             </gml:OperationParameter>
           </gml:parameter>
           <gml:parameter>
             <gml:OperationParameter gml:id="PoleLongitude">
-              <gml:identifier codeSpace="WMO">urn:ogc:def:parameter:WMO::TODO</gml:identifier>
-              <gml:name codeSpace="WMO">Longitude of rotated pole</gml:name>
+              <gml:identifier codeSpace="COSMO">urn:ogc:def:parameter:COSMO::102</gml:identifier>
+              <gml:name codeSpace="COSMO">Grid north pole longitude</gml:name>
             </gml:OperationParameter>
           </gml:parameter>
           <gml:parameter>
             <gml:OperationParameter gml:id="AxisRotation">
-              <gml:identifier codeSpace="WMO">urn:ogc:def:parameter:WMO::TODO</gml:identifier>
-              <gml:name codeSpace="WMO">Axis rotation</gml:name>
+              <gml:identifier codeSpace="COSMO">urn:ogc:def:parameter:COSMO::103</gml:identifier>
+              <gml:name codeSpace="COSMO">North pole grid longitude</gml:name>
             </gml:OperationParameter>
           </gml:parameter>
         </gml:OperationMethod>
       </gml:method>
       <gml:parameterValue>
         <gml:ParameterValue>
-          <gml:value uom="urn:ogc:def:uom:EPSG::9102">40.0</gml:value>                      <!-- TODO -->
+          <gml:value uom="urn:ogc:def:uom:EPSG::9102">39.25</gml:value>
           <gml:operationParameter xlink:href="#PoleLatitude"></gml:operationParameter>
         </gml:ParameterValue>
       </gml:parameterValue>
       <gml:parameterValue>
         <gml:ParameterValue>
-          <gml:value uom="urn:ogc:def:uom:EPSG::9102">-170.0</gml:value>                    <!-- TODO -->
+          <gml:value uom="urn:ogc:def:uom:EPSG::9102">-162</gml:value>
           <gml:operationParameter xlink:href="#PoleLongitude"></gml:operationParameter>
         </gml:ParameterValue>
       </gml:parameterValue>
       <gml:parameterValue>
         <gml:ParameterValue>
-          <gml:value uom="urn:ogc:def:uom:EPSG::9102">10.0</gml:value>                      <!-- TODO -->
+          <gml:value uom="urn:ogc:def:uom:EPSG::9102">0</gml:value>
           <gml:operationParameter xlink:href="#AxisRotation"></gml:operationParameter>
         </gml:ParameterValue>
       </gml:parameterValue>
@@ -128,7 +124,7 @@
       </gml:ellipsoidalCS>
       <gml:geodeticDatum>
         <gml:GeodeticDatum gml:id="COSMOKugel">
-          <gml:identifier codeSpace="COSMOS">urn:ogc:def:datum:COSMO::100</gml:identifier>
+          <gml:identifier codeSpace="COSMO">urn:ogc:def:datum:COSMO::100</gml:identifier>
           <gml:name>COSMO Kugel</gml:name>
           <gml:scope>Specific to COSMO project.</gml:scope>
           <gml:primeMeridian>
@@ -140,7 +136,7 @@
           </gml:primeMeridian>
           <gml:ellipsoid>
             <gml:Ellipsoid gml:id="Erdkugel">
-              <gml:identifier codeSpace="COSMOS">urn:ogc:def:ellipsoid:COSMO::100</gml:identifier>
+              <gml:identifier codeSpace="COSMO">urn:ogc:def:ellipsoid:COSMO::100</gml:identifier>
               <gml:name>Erdkugel</gml:name>
               <gml:semiMajorAxis uom="urn:ogc:def:uom:EPSG::9001">6371229.0</gml:semiMajorAxis>
               <gml:secondDefiningParameter>
