@@ -113,11 +113,19 @@ and the final rotation is clockwise when looking from the northern to the southe
   * λ<sub>t</sub> = Δλ<sub>t</sub> + θ
 
 
-**Note:** `ucar.unidata.geoloc.projection.RotatedPole` in UCAR netCDF library version 5.5.2 gives results
+#### Open question
+Axis rotation has been defined as "clockwise when looking from the northern to the southern rotated pole"
+for symmetry with the definition in South pole case.
+But it causes a change of sign (+θ instead of −θ) for the last term in above formula.
+Should be change the definition in a way that keep the same sign,
+for example by replacing "clockwise" by "counter-clockwise" in the North pole case?
+
+#### Open issue
+`ucar.unidata.geoloc.projection.RotatedPole` in UCAR netCDF library version 5.5.2 gives results
 with an offset of 180° in longitude values compared to what we would expect from a geometrical reasoning:
 if we rotate the pole to 60°N, then latitude of 59°N on Greenwich meridian become only 1° below new pole,
 i.e. 89°N, but still on the same meridian (Greenwich) because we did not cross the pole. Conversely 61°N
-is still at 89°N relative to the rotated pole, but on the other size of the pole, i.e. at longitude 180°.
+is still at 89°N relative to the rotated pole, but on the other side of the pole, i.e. at longitude 180°.
 But `RotatedPole` gives opposite longitude values (180° and 0° respectively).
 
 The "South pole rotation" method of netCDF library is consistent with this geometrical reasoning.
