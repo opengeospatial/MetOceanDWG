@@ -92,6 +92,7 @@ Define URN in “urn:ogc:def:method:WMO” namespace as references to templates 
 This proposal is detailled in the following pages:
 
 * [WMO as a source of authority codes for coordinate operations](WMO.md)
+* [OGC as a source of authority codes for pole rotation](Pole%20rotation.md)
 
 Following page is a more exploratory work:
 
