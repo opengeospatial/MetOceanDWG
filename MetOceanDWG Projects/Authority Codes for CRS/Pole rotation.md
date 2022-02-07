@@ -17,6 +17,8 @@ except for "North" or "South" prefix before operation name.
 
 
 ## South pole rotation
+This is the operation defined by GRIB template 3.1.
+Also used as the base operation from which the "North pole rotation" case will be derived.
 
 | Authority                 | Name or identifier            |
 | ------------------------- | ----------------------------- |
@@ -36,10 +38,10 @@ except for "North" or "South" prefix before operation name.
 
 
 ### Formula
-(Adapted from GRIB template 3.1):
 The rotations are applied by first rotating the sphere through λ<sub>p</sub> about the geographic polar axis,
 then rotating through (φ<sub>p</sub> − (−90°)) degrees so that the southern pole moved along the (previously rotated) Greenwich meridian,
 and finally by rotating clockwise when looking from the southern to the northern rotated pole.
+The 180° rotated meridian runs through both the geographical and the rotated South pole.
 
 * Definitions:
   * (φ, λ) the (latitude, longitude) to rotate.
@@ -59,19 +61,29 @@ and finally by rotating clockwise when looking from the southern to the northern
   * y<sub>t</sub> =  y
   * z<sub>t</sub> = −cos(φ<sub>p</sub>) ⋅ x − sin(φ<sub>p</sub>) ⋅ z
 * To spherical coordinates
-  * R = √(x<sub>t</sub>² + y<sub>t</sub>²)
-  *  φ<sub>t</sub> = atan2(z<sub>t</sub>, R)
+  *  φ<sub>t</sub> = asin(z<sub>t</sub>)
   * Δλ<sub>t</sub> = atan2(y<sub>t</sub>, x<sub>t</sub>)
 * Axis rotation
   * λ<sub>t</sub> = Δλ<sub>t</sub> − θ
 
 
+### Inverse operation
+Conversion from the rotated CRS to the geographic CRS can be done using the same "South pole rotation" method,
+but with all parameters with subscript <var>p</var> replaced by following parameters with subscript <var>g</var>:
+
+* φ<sub>g</sub>  = φ<sub>p</sub>
+* λ<sub>g</sub>  = copySign(180, θ<sub>p</sub>) - θ<sub>p</sub>
+* θ<sub>g</sub>  = copySign(180, λ<sub>p</sub>) - λ<sub>p</sub>
+
+`copySign(180, x)` is a function returning 180 with the same sign than <var>x</var>.
+In above formulas, it is used for applying a shift of 180° (for antipodal longitude)
+in such a way that the resulting angle stay in the [−180 … 180]° range.
+
 
 
 ## North pole rotation
-Note: the PROJ parameters in this section will apply to the _inverse_ operation,
-because of differences in the way those parameters are defined.
-The `-I` option in PROJ definition below gets the forward (inverse of inverse) operation.
+We found no authoritative source defining this operation.
+This section describes what seems a common usage.
 
 | Authority                 | Name or identifier                 |
 | ------------------------- | ---------------------------------- |
@@ -81,58 +93,55 @@ The `-I` option in PROJ definition below gets the forward (inverse of inverse) o
 | CF-convention name        | `rotated_latitude_longitude`       |
 | PROJ definition           | `-I +proj=ob_tran +o_proj=longlat` |
 
+Note: the PROJ parameters in this section will apply to the _inverse_ operation,
+because proposed OGC parameters are defined as latitude/longitude of the rotated pole,
+while PROJ parameters are latitude/longitude of the north pole expressed in the rotated CRS.
+The `-I` option in above PROJ definition gets the forward (inverse of inverse) operation.
+
 
 ### Parameters
 
-| Identifier proposal              | Name proposal             | CF-convention name          | PROJ name  |
-| -------------------------------- | ------------------------- | --------------------------- | ---------- |
-| `urn:ogc:def:parameter:OGC::111` | Latitude of rotated pole  | `grid_north_pole_latitude`  | `+o_lat_p` |
-| `urn:ogc:def:parameter:OGC::112` | Longitude of rotated pole | `grid_north_pole_longitude` | `+o_lon_p` |
-| `urn:ogc:def:parameter:OGC::113` | Axis rotation             | `north_pole_grid_longitude` | `+lon_0`   |
+| Identifier proposal              | Name proposal             | CF-convention name          | PROJ name          |
+| -------------------------------- | ------------------------- | --------------------------- | ------------------ |
+| `urn:ogc:def:parameter:OGC::111` | Latitude of rotated pole  | `grid_north_pole_latitude`  | `+o_lat_p`         |
+| `urn:ogc:def:parameter:OGC::112` | Longitude of rotated pole | `grid_north_pole_longitude` | `+o_lon_p`         |
+| `urn:ogc:def:parameter:OGC::113` | Axis rotation             | `north_pole_grid_longitude` | `+lon_0` antipodal |
+
+Note: the value given to PROJ `+lon_0` parameter needs to be the axis rotation value with a shift of ±180°.
+If there is no axis rotation, then `+lon_0=180` needs to be specified.
 
 
 ### Formula
-Similar to the south pole rotation except that the latitude rotation is (φ<sub>p</sub> − 90°) degrees
-and the final rotation is clockwise when looking from the northern to the southern rotated pole.
+The rotations are applied by first rotating the sphere through λ<sub>p</sub> about the geographic polar axis,
+then rotating through (φ<sub>p</sub> − 90°) degrees so that the northern pole moved along the (previously rotated) Greenwich meridian,
+and finally by rotating clockwise when looking from the northern to the southern rotated pole.
+The 0° rotated meridian is defined as the meridian that runs through both the geographical and the rotated North pole.
 
-* First rotation:
-  * Δλ = λ − λ<sub>p</sub>
-* To Cartesian coordinates
-  * x = cos(φ) ⋅ cos(Δλ)
-  * y = cos(φ) ⋅ sin(Δλ)
-  * z = sin(φ)
-* Useful trigonometric identities:
-  * sin(φ<sub>p</sub> − 90°) = −cos(φ<sub>p</sub>)
-  * cos(φ<sub>p</sub> − 90°) =  sin(φ<sub>p</sub>)
-* Rotate φ<sub>p</sub> − 90°
-  * x<sub>t</sub> = −cos(φ<sub>p</sub>) ⋅ z + sin(φ<sub>p</sub>) ⋅ x
-  * y<sub>t</sub> =  y
-  * z<sub>t</sub> =  cos(φ<sub>p</sub>) ⋅ x + sin(φ<sub>p</sub>) ⋅ z
-* To spherical coordinates
-  * R = √(x<sub>t</sub>² + y<sub>t</sub>²)
-  *  φ<sub>t</sub> = atan2(z<sub>t</sub>, R)
-  * Δλ<sub>t</sub> = atan2(y<sub>t</sub>, x<sub>t</sub>)
-* Axis rotation
-  * λ<sub>t</sub> = Δλ<sub>t</sub> + θ
+No formula is derived for the North pole case.
+Instead the "South pole rotation" method should be used for rotating the antipodal point of the rotated north pole.
+This approach automatically inserts a shift of 180° in longitude values, as required for above 0° meridian definition.
+More specifically, a "North pole rotation" with parameters identified by the subscript <var>N</var> below
+can be implemented by a "South pole rotation" with the following parameters:
+
+* φ<sub>p</sub>  = −φ<sub>N</sub>
+* λ<sub>p</sub>  =  λ<sub>N</sub> − copySign(180, λ<sub>N</sub>)
+* θ<sub>p</sub>  = −θ<sub>N</sub>
+
+
+### Inverse operation
+Conversion from the rotated CRS to the geographic CRS can be done using the same "North pole rotation" method,
+but with all parameters with subscript <var>N</var> replaced by following parameters with subscript <var>g</var>:
+
+* φ<sub>g</sub>  = φ<sub>N</sub>
+* λ<sub>g</sub>  = θ<sub>N</sub>
+* θ<sub>g</sub>  = λ<sub>N</sub>
 
 
 #### Open question
 Axis rotation has been defined as "clockwise when looking from the northern to the southern rotated pole"
 for symmetry with the definition in South pole case.
-But it causes a change of sign (+θ instead of −θ) for the last term in above formula.
-Should be change the definition in a way that keep the same sign,
-for example by replacing "clockwise" by "counter-clockwise" in the North pole case?
-
-#### Open issue
-`ucar.unidata.geoloc.projection.RotatedPole` in UCAR netCDF library version 5.5.2 gives results
-with an offset of 180° in longitude values compared to what we would expect from a geometrical reasoning:
-if we rotate the pole to 60°N, then latitude of 59°N on Greenwich meridian become only 1° below new pole,
-i.e. 89°N, but still on the same meridian (Greenwich) because we did not cross the pole. Conversely 61°N
-is still at 89°N relative to the rotated pole, but on the other side of the pole, i.e. at longitude 180°.
-But `RotatedPole` gives opposite longitude values (180° and 0° respectively).
-
-The "South pole rotation" method of netCDF library is consistent with this geometrical reasoning.
-We do not know if the difference observed for "North pole rotation" is intended or not.
+It also produces more symetrical formulas in this section.
+But we found no authoritative source saying if the rotation should be clockwise or counter-clockwise.
 
 
 ## Rotated ellipsoidal coordinate system
@@ -193,9 +202,108 @@ GEODCRS["COSMO-DWD rotated pole grid",
   REMARK["Used with grid spacing of 0.025° in rotated coordinates."]]
 ```
 
-Converting a central point in Germany (51.1657°N 10.4515°E) gives about (1.1666°N 179.71682°W).
-It was tested with both Apache SIS using XML definition and PROJ using following command line:
+Converting a central point in Germany (51.1657°N 10.4515°E) gives about (1.1666°N 0.2832°W).
+It can be tested with UCAR, PROJ and Apache SIS as below:
+
+
+## UCAR netCDF library
+The UCAR library has been used as a reference for both PROJ `ob_tran` mapping and for Apache SIS.
+The code below is a snippet of Java code for converting the above-cited test coordinates.
+Note that this code provides no datum information; it is purely the pole rotation method with nothing else.
+
+```java
+var point    = ucar.unidata.geoloc.LatLonPoint.create(51.1657, 10.4515);
+var rotation = new ucar.unidata.geoloc.projection.RotatedPole(40, -170);
+System.out.println(rotation.latLonToProj(point));
+```
+
+Output:
 
 ```
-cs2cs -I "EPSG:4326" +to +type=crs +proj=ob_tran +o_proj=longlat +datum=WGS84 +no_defs +o_lat_p=40 +o_lon_p=-170
+.2831 1.166
 ```
+
+
+## PROJ command line
+The following command-line can be executed on a Unix system.
+Note that this command pretends that the CRS uses the WGS84 datum.
+This is not exact; the COSMO definition uses a datum close (but not identical)
+to _International 1924 Authalic Sphere_ (`urn:ogc:def:datum:EPSG::6053`).
+However the `ob_tran` method ignores the ellipsoid, because formulas are applied on a sphere
+(like all other implementations tested on this page)
+and the source and target coordinates are geographic coordinates on the same sphere.
+The use of "WGS84" and "EPSG:4326" below are geodetically wrong,
+but we abuse them for the convenience of using well-known aliases in this command-line
+with the knowledge that PROJ will ignore them.
+See Apache SIS case for a discussion on the impact of the datum on output coordinates.
+
+```shell
+cs2cs -I "EPSG:4326" +to +type=crs +proj=ob_tran +o_proj=longlat +datum=WGS84 +no_defs \
+      +o_lat_p=40 +o_lon_p=-170 +lon_0=180 -f %g <<< "10.4515 51.1657"
+```
+
+Output:
+
+```
+1.16655	0.283179 0
+```
+
+Reminder: despite the datum specified in command-line, above inputs are **not** WGS 84 coordinates.
+They are closer to "International 1924" coordinates. See discussion about datum below.
+If desired, transformation from/to WGS 84 can be added using more PROJ parameters.
+
+
+## Apache SIS
+Apache SIS can read GML, so it can be used for testing the [RotatedPole.xml](RotatedPole.xml) definition file directly.
+In the following command-line, replace `RotatedPole.xml` by
+[this URL](https://raw.githubusercontent.com/opengeospatial/MetOceanDWG/main/MetOceanDWG%20Projects/Authority%20Codes%20for%20CRS/RotatedPole.xml)
+(edit URL path if the location of `RotatedPole.xml` file changed) or a local copy of that file.
+This command requires SIS version 1.2 or above,
+because the "North pole rotation" method was not available in SIS 1.1.
+
+```shell
+sis transform --sourceCRS EPSG:4053 --targetCRS "RotatedPole.xml" <<< "51.1657, 10.4515"
+```
+
+Output:
+
+```
+# Source:      Unspecified datum based upon the International 1924 Authalic Sphere (EPSG:4053)
+# Destination: COSMO-DWD rotated pole grid (COSMO:101)
+# Operations:  Abridged Molodensky → COSMO-DE pole rotation (COSMO:101)
+# Accuracy:    3000.0 metres
+
+Rotated latitude (°), Rotated longitude (°)
+    1.166554714,      0.283179132
+```
+
+### Discussion about datum
+Above command used "International 1924 Authalic Sphere", which is a sphere of radius 6371228 meters.
+This is very close to the COSMO model, which uses a sphere of radius 6371229 meters, but not identical.
+The one meter difference is the reason why Apache SIS inserted an "Abridged Molodensky" operation before the pole rotation.
+Since that operation is not referenced in the EPSG database, this is considered as a datum shift of unknown accuracy.
+In such case SIS conservatively reports a 3 km accuracy as the worst case scenario.
+The result is nevertheless close to UCAR and PROJ results because of similarity between the two spheres.
+
+If we replace EPSG:4053 (International 1924) by EPSG:4326 (WGS 84) in the command-line:
+
+```shell
+sis transform --sourceCRS EPSG:4326 --targetCRS "RotatedPole.xml" <<< "51.1657, 10.4515"
+```
+
+Then the result become:
+
+```
+# Source:      WGS 84 (EPSG:4326)
+# Destination: COSMO-DWD rotated pole grid (COSMO:101)
+# Operations:  Abridged Molodensky → COSMO-DE pole rotation (COSMO:101)
+# Accuracy:    3000.0 metres
+
+Rotated latitude (°), Rotated longitude (°)
+    0.978570118,      0.284314319
+```
+
+The difference between the two results is about 20 km.
+Users should be careful about whether their tools apply a datum shift or not.
+In this example, the datum shift is only a change of ellipsoid axis lengths and flattening factors,
+without Bursa-Wolf parameters or Helmert transformation.
