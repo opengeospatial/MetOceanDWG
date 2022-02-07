@@ -107,8 +107,11 @@ The `-I` option in above PROJ definition gets the forward (inverse of inverse) o
 | `urn:ogc:def:parameter:OGC::112` | Longitude of rotated pole | `grid_north_pole_longitude` | `+o_lon_p`         |
 | `urn:ogc:def:parameter:OGC::113` | Axis rotation             | `north_pole_grid_longitude` | `+lon_0` antipodal |
 
-Note: the value given to PROJ `+lon_0` parameter needs to be the axis rotation value with a shift of ±180°.
+**Note on PROJ parameters:**
+The value given to PROJ `+lon_0` parameter needs to be the axis rotation value with a shift of ±180°.
 If there is no axis rotation, then `+lon_0=180` needs to be specified.
+Alternatively, the `-I` option can be avoided by swapping the `+lon_0` and `+o_lon_p` values
+(the +180 offset stay on `+lon_0`).
 
 
 ### Formula
