@@ -161,6 +161,17 @@ Axis names are constrained by [ISO 19111 table 27](http://docs.opengeospatial.or
 and above names are not in the list of permitted axis names.
 
 
+### XML definition files
+Two components could be subject to OGC standardisation and are provided as GML files:
+
+* [PoleRotation.xml](PoleRotation.xml) defines the operation method described in this page.
+* [RotatedCS.xml](RotatedCS.xml) defines the ellipsoidal coordinate system described above.
+
+Above are only components, not fully defined CRS.
+While above components could be used for any CRS based on rotated pole,
+a fully CRS can only be specific to a particular meteorological model (or other application).
+The next section gives an example.
+
 
 # Example with COSMO meteorological model
 The [RotatedPole.xml](RotatedPole.xml) file gives an example of CRS definition in GML.
