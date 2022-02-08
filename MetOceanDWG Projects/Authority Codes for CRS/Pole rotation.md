@@ -247,7 +247,7 @@ However the `ob_tran` method ignores the ellipsoid, because formulas are applied
 (like all other implementations tested on this page)
 and the source and target coordinates are geographic coordinates on the same sphere.
 Replacing "EPSG:4053" (International 1924) by "EPSG:4326" (WGS 1984) on PROJ 8.2.0
-does not change the outout coordinates.
+does not change the output coordinates.
 
 ```shell
 cs2cs -I "EPSG:4053" +to +type=crs +proj=ob_tran +o_proj=longlat +R=6371229 +no_defs \
