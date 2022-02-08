@@ -40,8 +40,8 @@ Also used as the base operation from which the "North pole rotation" case will b
 ### Formula
 The rotations are applied by first rotating the sphere through λ<sub>p</sub> about the geographic polar axis,
 then rotating through (φ<sub>p</sub> − (−90°)) degrees so that the southern pole moved along the (previously rotated) Greenwich meridian,
-and finally by rotating clockwise when looking from the southern to the northern rotated pole.
-The 180° rotated meridian runs through both the geographical and the rotated South pole.
+and finally by rotating θ<sub>p</sub> degrees clockwise when looking from the southern to the northern rotated pole.
+In the case where θ<sub>p</sub>=0, the 180° rotated meridian runs through both the geographical and the rotated South pole.
 
 * Definitions:
   * (φ, λ) the (latitude, longitude) to rotate.
@@ -117,8 +117,9 @@ Alternatively, the `-I` option can be avoided by swapping the `+lon_0` and `+o_l
 ### Formula
 The rotations are applied by first rotating the sphere through λ<sub>p</sub> about the geographic polar axis,
 then rotating through (φ<sub>p</sub> − 90°) degrees so that the northern pole moved along the (previously rotated) Greenwich meridian,
-and finally by rotating clockwise when looking from the northern to the southern rotated pole.
-The 0° rotated meridian is defined as the meridian that runs through both the geographical and the rotated North pole.
+and finally by rotating θ<sub>p</sub> degrees clockwise when looking from the northern to the southern rotated pole.
+In the case where θ<sub>p</sub>=0, the 0° rotated meridian is defined as the meridian that runs through both the
+geographical and the rotated North pole.
 
 No formula is derived for the North pole case.
 Instead the "South pole rotation" method should be used for rotating the antipodal point of the rotated north pole.
