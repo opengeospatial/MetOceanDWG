@@ -240,19 +240,17 @@ Output:
 
 ## PROJ command line
 The following command-line can be executed on a Unix system.
-Note that this command pretends that the CRS uses the WGS84 datum.
-This is not exact; the COSMO definition uses a datum close (but not identical)
+Note that the COSMO model uses a sphere which is close, but not identical,
 to _International 1924 Authalic Sphere_ (`urn:ogc:def:datum:EPSG::6053`).
+We use EPSG:4053 CRS as a close approximation.
 However the `ob_tran` method ignores the ellipsoid, because formulas are applied on a sphere
 (like all other implementations tested on this page)
 and the source and target coordinates are geographic coordinates on the same sphere.
-The use of "WGS84" and "EPSG:4326" below are geodetically wrong,
-but we abuse them for the convenience of using well-known aliases in this command-line
-with the knowledge that PROJ will ignore them.
-See Apache SIS case for a discussion on the impact of the datum on output coordinates.
+Replacing "EPSG:4053" (International 1924) by "EPSG:4326" (WGS 1984) on PROJ 8.2.0
+does not change the outout coordinates.
 
 ```shell
-cs2cs -I "EPSG:4326" +to +type=crs +proj=ob_tran +o_proj=longlat +datum=WGS84 +no_defs \
+cs2cs -I "EPSG:4053" +to +type=crs +proj=ob_tran +o_proj=longlat +R=6371229 +no_defs \
       +o_lat_p=40 +o_lon_p=-170 +lon_0=180 -f %g <<< "10.4515 51.1657"
 ```
 
@@ -262,9 +260,12 @@ Output:
 1.16655	0.283179 0
 ```
 
-Reminder: despite the datum specified in command-line, above inputs are **not** WGS 84 coordinates.
-They are closer to "International 1924" coordinates. See discussion about datum below.
+**Reminder:** input coordinates (or output coordinates in inverse operation)
+above are **not** WGS 1984 (EPSG:4326) geographic coordinates.
+They are closer to "International 1924" coordinates.
+There is a potential difference of about 20 km in Central Germany.
 If desired, transformation from/to WGS 84 can be added using more PROJ parameters.
+See Apache SIS case below for more discussion on the impact of the datum on output coordinates.
 
 
 ## Apache SIS
