@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:OperationMethod
+  xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd"
+  xmlns:xsi          = "http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml          = "http://www.opengis.net/gml/3.2"
+  gml:id="PoleRotation">
+  <gml:identifier codeSpace="OGC">urn:ogc:def:method:OGC::110</gml:identifier>
+  <gml:name codeSpace="OGC">North pole rotation</gml:name>
+  <gml:formula>See netCDF-CF conventions, section "Rotated Pole".</gml:formula>
+  <gml:sourceDimensions>2</gml:sourceDimensions>
+  <gml:targetDimensions>2</gml:targetDimensions>
+  <gml:parameter>
+    <gml:OperationParameter gml:id="PoleLatitude">
+      <gml:identifier codeSpace="OGC">urn:ogc:def:parameter:OGC::111</gml:identifier>
+      <gml:name codeSpace="OGC">Latitude of rotated pole</gml:name>
+    </gml:OperationParameter>
+  </gml:parameter>
+  <gml:parameter>
+    <gml:OperationParameter gml:id="PoleLongitude">
+      <gml:identifier codeSpace="OGC">urn:ogc:def:parameter:OGC::112</gml:identifier>
+      <gml:name codeSpace="OGC">Longitude of rotated pole</gml:name>
+    </gml:OperationParameter>
+  </gml:parameter>
+  <gml:parameter>
+    <gml:OperationParameter gml:id="AxisRotation">
+      <gml:identifier codeSpace="OGC">urn:ogc:def:parameter:OGC::113</gml:identifier>
+      <gml:name codeSpace="OGC">Axis rotation</gml:name>
+    </gml:OperationParameter>
+  </gml:parameter>
+</gml:OperationMethod>

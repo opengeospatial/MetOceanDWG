@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:EllipsoidalCS
+  xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/coordinateReferenceSystems.xsd"
+  xmlns:xsi          = "http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gml          = "http://www.opengis.net/gml/3.2"
+  gml:id="rotated-CS">
+  <gml:identifier codeSpace="OGC">urn:ogc:def:cs:OGC::100</gml:identifier>
+  <gml:name>Ellipsoidal rotated CS.</gml:name>
+  <gml:axis>
+    <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="rotated-latitude">
+      <gml:identifier codeSpace="OGC">urn:ogc:def:axis:OGC::101</gml:identifier>
+      <gml:name>Rotated latitude</gml:name>
+      <gml:axisAbbrev>φ</gml:axisAbbrev>
+      <gml:axisDirection codeSpace="ISO">north</gml:axisDirection>
+      <gml:minimumValue>-90.0</gml:minimumValue>
+      <gml:maximumValue>90.0</gml:maximumValue>
+      <gml:rangeMeaning codeSpace="ISO">exact</gml:rangeMeaning>
+    </gml:CoordinateSystemAxis>
+  </gml:axis>
+  <gml:axis>
+    <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="rotated-longitude">
+      <gml:identifier codeSpace="OGC">urn:ogc:def:axis:OGC::102</gml:identifier>
+      <gml:name>Rotated longitude</gml:name>
+      <gml:axisAbbrev>λ</gml:axisAbbrev>
+      <gml:axisDirection codeSpace="ISO">east</gml:axisDirection>
+      <gml:minimumValue>-180.0</gml:minimumValue>
+      <gml:maximumValue>180.0</gml:maximumValue>
+      <gml:rangeMeaning codeSpace="ISO">exact</gml:rangeMeaning>
+    </gml:CoordinateSystemAxis>
+  </gml:axis>
+</gml:EllipsoidalCS>
