@@ -20,12 +20,12 @@ except for "North" or "South" prefix before operation name.
 This is the operation defined by GRIB template 3.1.
 Also used as the base operation from which the "North pole rotation" case will be derived.
 
-| Authority                 | Name or identifier            |
-| ------------------------- | ----------------------------- |
-| OGC identifier (proposal) | `urn:ogc:def:method:OGC::100` |
-| OGC name (proposal)       | `South pole rotation`         |
-| WMO name                  | `Rotated Latitude/longitude`  |
-| Name in UCAR library      | `rotated_latlon_grib`         |
+| Authority                 | Name or identifier                |
+| ------------------------- | --------------------------------- |
+| OGC identifier (proposal) | `urn:ogc:def:method:OGC::100`     |
+| OGC name (proposal)       | `South pole rotation (Spherical)` |
+| WMO name                  | `Rotated Latitude/longitude`      |
+| Name in UCAR library      | `rotated_latlon_grib`             |
 
 
 ### Parameters
@@ -88,7 +88,7 @@ This section describes what seems a common usage.
 | Authority                 | Name or identifier                 |
 | ------------------------- | ---------------------------------- |
 | OGC identifier (proposal) | `urn:ogc:def:method:OGC::110`      |
-| OGC name (proposal)       | `North pole rotation`              |
+| OGC name (proposal)       | `North pole rotation (Spherical)`  |
 | WMO name                  | (none)                             |
 | CF-convention name        | `rotated_latitude_longitude`       |
 | PROJ definition           | `-I +proj=ob_tran +o_proj=longlat` |
@@ -202,7 +202,7 @@ GEODCRS["COSMO-DWD rotated pole grid",
       ELLIPSOID["DWD Models Sphere", 6371229.0, 0.0, LENGTHUNIT["metre", 1]]],
       PRIMEM["Greenwich", 0.0, ANGLEUNIT["degree", 0.017453292519943295]]],
   DERIVINGCONVERSION["COSMO-DE pole rotation",
-    METHOD["North pole rotation", ID["OGC", 110]],
+    METHOD["North pole rotation (Spherical)", ID["OGC", 110]],
     PARAMETER["Latitude of rotated pole", 40.0, ANGLEUNIT["degree", 0.017453292519943295]],
     PARAMETER["Longitude of rotated pole", -170.0, ANGLEUNIT["degree", 0.017453292519943295]],
     PARAMETER["Axis rotation", 0.0, ANGLEUNIT["degree", 0.017453292519943295]]],

@@ -45,7 +45,7 @@
       <gml:method>
         <gml:OperationMethod gml:id="PoleRotation">
           <gml:identifier codeSpace="OGC">urn:ogc:def:method:OGC::110</gml:identifier>
-          <gml:name codeSpace="OGC">North pole rotation</gml:name>
+          <gml:name codeSpace="OGC">North pole rotation (Spherical)</gml:name>
           <gml:formula>See netCDF-CF conventions, section "Rotated Pole".</gml:formula>
           <gml:sourceDimensions>2</gml:sourceDimensions>
           <gml:targetDimensions>2</gml:targetDimensions>
