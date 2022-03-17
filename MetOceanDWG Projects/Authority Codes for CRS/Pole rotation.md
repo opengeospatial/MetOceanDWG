@@ -20,12 +20,12 @@ except for "North" or "South" prefix before operation name.
 This is the operation defined by GRIB template 3.1.
 Also used as the base operation from which the "North pole rotation" case will be derived.
 
-| Authority                 | Name or identifier            |
-| ------------------------- | ----------------------------- |
-| OGC identifier (proposal) | `urn:ogc:def:method:OGC::100` |
-| OGC name (proposal)       | `South pole rotation`         |
-| WMO name                  | `Rotated Latitude/longitude`  |
-| Name in UCAR library      | `rotated_latlon_grib`         |
+| Authority                 | Name or identifier                |
+| ------------------------- | --------------------------------- |
+| OGC identifier (proposal) | `urn:ogc:def:method:OGC::100`     |
+| OGC name (proposal)       | `South pole rotation (Spherical)` |
+| WMO name                  | `Rotated Latitude/longitude`      |
+| Name in UCAR library      | `rotated_latlon_grib`             |
 
 
 ### Parameters
@@ -40,8 +40,8 @@ Also used as the base operation from which the "North pole rotation" case will b
 ### Formula
 The rotations are applied by first rotating the sphere through λ<sub>p</sub> about the geographic polar axis,
 then rotating through (φ<sub>p</sub> − (−90°)) degrees so that the southern pole moved along the (previously rotated) Greenwich meridian,
-and finally by rotating clockwise when looking from the southern to the northern rotated pole.
-The 180° rotated meridian runs through both the geographical and the rotated South pole.
+and finally by rotating θ<sub>p</sub> degrees clockwise when looking from the southern to the northern rotated pole.
+In the case where θ<sub>p</sub>=0, the 180° rotated meridian runs through both the geographical and the rotated South pole.
 
 * Definitions:
   * (φ, λ) the (latitude, longitude) to rotate.
@@ -88,7 +88,7 @@ This section describes what seems a common usage.
 | Authority                 | Name or identifier                 |
 | ------------------------- | ---------------------------------- |
 | OGC identifier (proposal) | `urn:ogc:def:method:OGC::110`      |
-| OGC name (proposal)       | `North pole rotation`              |
+| OGC name (proposal)       | `North pole rotation (Spherical)`  |
 | WMO name                  | (none)                             |
 | CF-convention name        | `rotated_latitude_longitude`       |
 | PROJ definition           | `-I +proj=ob_tran +o_proj=longlat` |
@@ -117,8 +117,9 @@ Alternatively, the `-I` option can be avoided by swapping the `+lon_0` and `+o_l
 ### Formula
 The rotations are applied by first rotating the sphere through λ<sub>p</sub> about the geographic polar axis,
 then rotating through (φ<sub>p</sub> − 90°) degrees so that the northern pole moved along the (previously rotated) Greenwich meridian,
-and finally by rotating clockwise when looking from the northern to the southern rotated pole.
-The 0° rotated meridian is defined as the meridian that runs through both the geographical and the rotated North pole.
+and finally by rotating θ<sub>p</sub> degrees clockwise when looking from the northern to the southern rotated pole.
+In the case where θ<sub>p</sub>=0, the 0° rotated meridian is defined as the meridian that runs through both the
+geographical and the rotated North pole.
 
 No formula is derived for the North pole case.
 Instead the "South pole rotation" method should be used for rotating the antipodal point of the rotated north pole.
@@ -201,7 +202,7 @@ GEODCRS["COSMO-DWD rotated pole grid",
       ELLIPSOID["DWD Models Sphere", 6371229.0, 0.0, LENGTHUNIT["metre", 1]]],
       PRIMEM["Greenwich", 0.0, ANGLEUNIT["degree", 0.017453292519943295]]],
   DERIVINGCONVERSION["COSMO-DE pole rotation",
-    METHOD["North pole rotation", ID["OGC", 110]],
+    METHOD["North pole rotation (Spherical)", ID["OGC", 110]],
     PARAMETER["Latitude of rotated pole", 40.0, ANGLEUNIT["degree", 0.017453292519943295]],
     PARAMETER["Longitude of rotated pole", -170.0, ANGLEUNIT["degree", 0.017453292519943295]],
     PARAMETER["Axis rotation", 0.0, ANGLEUNIT["degree", 0.017453292519943295]]],
@@ -247,7 +248,7 @@ However the `ob_tran` method ignores the ellipsoid, because formulas are applied
 (like all other implementations tested on this page)
 and the source and target coordinates are geographic coordinates on the same sphere.
 Replacing "EPSG:4053" (International 1924) by "EPSG:4326" (WGS 1984) on PROJ 8.2.0
-does not change the outout coordinates.
+does not change the output coordinates.
 
 ```shell
 cs2cs -I "EPSG:4053" +to +type=crs +proj=ob_tran +o_proj=longlat +R=6371229 +no_defs \

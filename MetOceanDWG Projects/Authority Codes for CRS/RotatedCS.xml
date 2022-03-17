@@ -10,7 +10,7 @@
     <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="rotated-latitude">
       <gml:identifier codeSpace="OGC">urn:ogc:def:axis:OGC::101</gml:identifier>
       <gml:name>Rotated latitude</gml:name>
-      <gml:axisAbbrev>φ</gml:axisAbbrev>
+      <gml:axisAbbrev>rlat</gml:axisAbbrev>
       <gml:axisDirection codeSpace="ISO">north</gml:axisDirection>
       <gml:minimumValue>-90.0</gml:minimumValue>
       <gml:maximumValue>90.0</gml:maximumValue>
@@ -21,7 +21,7 @@
     <gml:CoordinateSystemAxis uom="urn:ogc:def:uom:EPSG::9122" gml:id="rotated-longitude">
       <gml:identifier codeSpace="OGC">urn:ogc:def:axis:OGC::102</gml:identifier>
       <gml:name>Rotated longitude</gml:name>
-      <gml:axisAbbrev>λ</gml:axisAbbrev>
+      <gml:axisAbbrev>rlon</gml:axisAbbrev>
       <gml:axisDirection codeSpace="ISO">east</gml:axisDirection>
       <gml:minimumValue>-180.0</gml:minimumValue>
       <gml:maximumValue>180.0</gml:maximumValue>
