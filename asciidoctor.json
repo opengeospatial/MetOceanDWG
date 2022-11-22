@@ -1,0 +1,17 @@
+{
+        "0":  {
+                "OGC_doc_number": "20-010",
+                "urn":"http://www.opengis.net/doc/DP/PubSub/1.0",
+                "title":"OGC PubSub for MetOcean",
+                "path":"PubSub_Draft/document.adoc",
+                "options": ["--trace"],
+                "a":[
+                        "data-uri",
+                        "stylesdir=./resources/stylesheets",
+                        "dot=/usr/bin/dot"
+                ],
+                "r":[
+                        "asciidoctor-diagram"
+                ]
+        }
+ }
