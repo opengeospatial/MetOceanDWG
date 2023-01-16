@@ -4,5 +4,6 @@
 [width="90%",options="header"]
 |===
 |Date |Release |Editor | Primary clauses modified |Description
-|2016-04-28 |0.1 |G. Editor |all |initial version
+|2022-11-22 |0.1 |S. Olson|all |initial version
+|2023-01-15 |0.2 |T. Kralidis|all |bootstrap
 |===

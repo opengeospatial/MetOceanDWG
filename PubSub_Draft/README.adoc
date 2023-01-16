@@ -20,4 +20,8 @@ This folder contains the text for the Discussion Paper
 
 == Building
 
-Run `make`.
+To convert the draft OGC Discussion Paper from asciidoc format to HTML and PDF formats, we use the metanorma software to **compile** the document.
+
+From this folder, run the following command.
+
+`docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts  metanorma/mn  metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc`

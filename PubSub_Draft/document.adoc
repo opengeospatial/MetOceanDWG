@@ -1,4 +1,4 @@
-= Discussion paper for OGC (add title text)
+= Discussion paper for Publish-Subscribe workflow in OGC APIs
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :doctype: discussion-paper
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
@@ -6,27 +6,31 @@
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Iteration of the document draft in X.Y format; optional. If present, reviewer notes will be shown in output (for more information visit https://www.metanorma.org/author/topics/document-format/reviewer-notes/)
-:draft: 3.0
-:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
-:external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
+:draft: 1.0
+:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/DP/ogcapi-pubsub/1.0"
+:external-id: http://www.opengis.net/doc/discussion-paper/ogcapi-pubsub/1.0
 :comment: ### Internal reference number; mandatory
-:docnumber: 19-004
+:docnumber: TBD
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2019-02-05
+:received-date: 2022-12-20
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
 :issued-date: 2019-02-28
 :comment: ### Date on which the standard was published; mandatory
 :published-date: 2019-12-11
 :comment: ### Author one
-:fullname: Kyoung-Sook Kim
+:fullname: Tom Kralidis
 :comment: ### Author two
-:fullname_2: Jiyeong Lee
+:fullname_2: Mark Burgoyne
+:comment: ### Author three
+:fullname_3: Steve Olson
+:comment: ### Author three
+:fullname_4: Shane Mill
 :comment: ### Role of the authors; mandatory
 :role: editor
 :comment: ### Comma delimited keywords; mandatory
-:keywords: ogcdoc, OGC document, OGC, IndoorGML, Indoor space, Outdoor space, Seamless navigation, CityGML
+:keywords: OGC API, PubSub, Publish, Subscribe, Publish-Subscribe, Event driven architecture, Asynchronous, OGC document, OGC
 :comment: ### Semicolon-delimited list of the submitting organizations; mandatory
-:submitting-organizations: National Institute of Advanced Industrial Science and Technology; The University of Seoul; All for Land Inc
+:submitting-organizations: Meteorological Service of Canada; UK Met Office; US National Weather Service;
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory
@@ -47,17 +51,13 @@ include::sections/clause_0_front_material.adoc[]
 
 include::sections/clause_1_scope.adoc[]
 
-include::sections/clause_2_conformance.adoc[]
-
 include::sections/clause_3_references.adoc[]
 
 include::sections/clause_4_terms_and_definitions.adoc[]
 
 include::sections/clause_5_conventions.adoc[]
 
-include::sections/clause_6_informative_text.adoc[]
-
-include::sections/clause_7_normative_text.adoc[]
+include::sections/clause_6_discussion.adoc[]
 
 ////
 add or remove annexes after "A" as necessary

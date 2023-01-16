@@ -1,5 +1,2 @@
 == Scope
-[NOTE]
-====
-Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.
-====
+This Discussion Paper provides insight into the ongoing work within the OGC MetOcean Domain Working Group (MetOceanDWG) and related activities (World Meteorological Organization Information System version 2 [WIS2])) regarding Publish-Subscribe architecture. This paper makes a case for a Publish-Subscribe standard in the OGC API ecosysrtem.
