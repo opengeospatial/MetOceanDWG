@@ -23,7 +23,7 @@ Key core protocols and encodings of WIS2 are identified below:
 
 A draft architecture is illustrated below, exemplifying the PubSub interactions between WIS2 Nodes and the Global Broker (a WIS2 global service).
 
-image::images/wis2.c4.container.png[WIS2 Architecture C4 container diagram]
+image::https://github.com/opengeospatial/MetOceanDWG/blob/pubsub-dp-bootstrap/PubSub_Draft/images/wis2.c4.container.png[WIS2 Architecture C4 container diagram]
 
 === Protocols and Message Queuing Protocol (MQP) Brokers
 
