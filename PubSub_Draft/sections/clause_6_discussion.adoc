@@ -2,15 +2,15 @@
 
 Event-driven worflows provide publish-subscribe based capabilities as part of information systems and architectures. The publish-subscribe model also provides efficiencies in providing data "as it happens", thereby alleviating potential clients from continuous polling to check on the availability of new data/resources.
 
-The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The publish-subscribe model results in less network traffic and timely responses to manage event-based model such as urgent, temporally unpredictable data (examples include, but are not limited to: weather or hazard warnings, sensor data).
+The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The publish-subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: weather or hazard warnings, sensor data).
 
-Building on the OGC Publish/Subscribe Interface Standard, as well as the recommendations put for in the OGC PubSub White Paper (OGC 20-046) produces as part of OGC Testbed 12, this discussion paper discusses approaches for integrating publish-subscribe architecture into the OGC API suite of standards.
+Building on the OGC Publish-Subscribe Interface Standard, as well as the recommendations put forward in the OGC PubSub White Paper (OGC 20-046) produced as part of OGC Testbed 12, this paper discusses approaches for integrating publish-subscribe architecture into the OGC API suite of standards.
 
 == WMO WIS2 implementation
 
-The WMO Information System 2.0 (WIS 2.0) is the framework for WMO data sharing in the 21st century for all WMO domains and disciplines. It supports the WMO Unified Data policy, the Global Basic Observing Network (GBON) and makes international, regional, and national data sharing simple, effective, and inexpensive. The idea that no Member should be left behind and the objective of lowering the barrier to adoption has been at the core of WIS 2.0 development. These objectives inspire the principles underpinning the WIS 2.0 technical framework, such as adopting open standards and Web technologies to facilitate sharing of increasing variety and volume of real-time datafootnote:[https://community.wmo.int/activity-areas/wis].
+The WMO Information System 2.0 (WIS 2.0) is the framework for WMO data sharing in the 21st century for all WMO domains and disciplines. It supports the WMO Unified Data policy, the Global Basic Observing Network (GBON) and makes international, regional, and national data sharing simple, effective, and inexpensive. The idea that no WMO~ Member should be left behind and the objective of lowering the barrier to adoption has been at the core of WIS 2.0 development. These objectives inspire the principles underpinning the WIS 2.0 technical framework, such as adopting open standards and Web technologies to facilitate sharing of increasing variety and volume of real-time datafootnote:[https://community.wmo.int/activity-areas/wis].
 
-Given the real-time nature of weather/climate/water data, WIS2 makes significant use of PubSub standards and technologies, that have resulted in the following draft standards:
+Given the real-time nature of weather/climate/water data, WIS2 makes significant use of PubSub standards and technologies, and has resulted in the following draft standards:
 
 - WIS2 Notification Messagefootnote:[https://github.com/wmo-im/wis2-notification-message]
 - WIS2 Topic Hierarchyfootnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
@@ -27,13 +27,13 @@ image::images/wis2.c4.container.png[WIS2 Architecture C4 container diagram]
 
 === Protocols and Message Queuing Protocol (MQP) Brokers
 
-WIS2 mandates use of a Message Queuing Protocol (MQP) using MQTT 3.1.1 and/or MQTT 5.0. MQTT can also be used over the Web using WebSockets, thereby providing the ability for mobile and web applications to build.
+WIS2 mandates use of a Message Queuing Protocol (MQP) using MQTT 3.1.1 and/or MQTT 5.0. MQTT can also be used over the Web using WebSockets, thereby providing the ability to build mobile and web applications.
 
 === Notification Message
 
-The WIS2 standard notification message format ensures that the WIS2 ecosystem (data publisher, data user, and global services) is a robust, effective, and unified exchange platform for weather, climate, and water data. The message provides notification metadata about the availability of a new data granule.  The message is encoded using a GeoJSON baseline, and provides detailed information on the data notification (associated datetime of the granule, publishing datetime, integrity), as well as access to the data via a link object or inline content (useful for encoding small messages). Geometry is required (given GeoJSON requirements), however can be expressed with a ``null`` value when generating the geometry in the message is not possible, practical or timely by data publishers. To support extensibility, additional properties are also valid (given the default definition in JSON Schema).
+The WIS2 standard notification message format ensures that the WIS2 ecosystem (data publisher, data user, and global services) is a robust, effective, and unified exchange platform for weather, climate, and water data. The message provides notification metadata about the availability of a new data granule.  The message is encoded using a GeoJSON baseline, and provides detailed information on the data notification (associated datetime of the granule, publishing datetime, integrity), as well as access to the data via a link object or inline content (useful for encoding small messages). Geometry is required (given GeoJSON requirements), however can be expressed with a ``null`` value when generating the geometry in the message is not possible, practical or timely for data publishers. To support extensibility, additional properties are also valid (given the default definition in JSON Schema).
 
-Using a GeoJSON basline as the message payload allows for broad interoperability given the large ecosystem of tooling (decoders, encoders) supporting same. An example web application demonstrating the ease of integration can be found at https://kralidis.ca/tmp/wis2-data-notifications.html.
+Using a GeoJSON baseline as the message payload allows for broad interoperability given the large ecosystem of tooling (decoders, encoders) supporting the same approach. An example web application demonstrating the ease of integration can be found at https://kralidis.ca/tmp/wis2-data-notifications.html.
 
 .Example of a WIS2 Notification Message
 [source,json]
@@ -75,7 +75,7 @@ Using a GeoJSON basline as the message payload allows for broad interoperability
 
 === Topic hierarchy
 
-The WIS2 topic hierarchy provides a central classification and categorization scheme used by data providers and WIS2 Global Services in support of core WIS2 workflows: publish, discover, subscribe and download, and is aligned with and implements WMO Res. 1 Cg-EXT-21 - Unified Data Policyfootnote:[https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/ckeditor/files/Cg-Ext2021-d04-1-WMO-UNIFIED-POLICY-FOR-THE-INTERNATIONAL-approved_en_0.pdf?4pv38FtU6R4fDNtwqOxjBCndLIfntWeR]. The topic hierarchy defines eight (8) core levels for all WIS2 data, and provides an extensibility framework for specific information commiunities (atmospheric composition, cryosphere, etc.) to define their own hierarchy as subdomains.
+The WIS2 topic hierarchy provides a central classification and categorization scheme used by data providers and WIS2 Global Services in support of core WIS2 workflows: publish, discover, subscribe and download, and is aligned with and implements WMO Res. 1 Cg-EXT-21 - Unified Data Policyfootnote:[https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/ckeditor/files/Cg-Ext2021-d04-1-WMO-UNIFIED-POLICY-FOR-THE-INTERNATIONAL-approved_en_0.pdf?4pv38FtU6R4fDNtwqOxjBCndLIfntWeR]. The topic hierarchy defines eight (8) core levels for all WIS2 data, and provides an extensibility framework for specific information communities (atmospheric composition, cryosphere, etc.) to define their own hierarchy as subdomains.
 
 Combined with implementing MQP brokers, the topic hierarchy allows for subscribing and filtering of notification messages by data consumers.
 
@@ -83,14 +83,14 @@ Combined with implementing MQP brokers, the topic hierarchy allows for subscribi
 
 === Topic hierarchy, message payloads and OGC API endpoints
 
-The OGC API endpoint hierarchy can be used in parallel as a topic hierarchy when the data publisher wishes to provide PubSub capability for OGC API resources nornally available via same. Below are examples of OGC endpoints normally available via HTTP, and how they can be re-used as topics for PubSub workflow:
+The OGC API endpoint hierarchy can be used in parallel as a topic hierarchy when the data publisher wishes to provide PubSub capability for OGC API resources normally available in the same way. Below are examples of OGC endpoints normally available via HTTP, and how they can be re-used as topics for PubSub workflow:
 
 - ``/collections``: notifies Subscribers whenever there is a change to the ``/collections`` OGC API endpoint (for example, addition of a new collection). The message payload would be collection metadata as defined by OGC API - Common
 - ``/collections/{collectionId}``: notifies Subscribers whenever there is an update to a single collection (for example, spatial or temporal extents, new items, etc.). The message payload would be defined by the resource model of the given collection (items, etc.)
 
-For smaller payload workflow, OGC APIs can additionally provide a topic for notification metadata in order to receive a smaller message payload, which a user can process to determine whether to further interact with the reference data granule/resource.
+For smaller payload workflow, OGC APIs can additionally provide a topic for notification metadata in order to receive a smaller message payload, which a user can process to determine whether to further interact with the reference data granule or resource.
 
-Using the OGC API endpoint hierarchy provides the key benefit in that OGC API users do not need to learn a different/additional approach or hierarchy for PubSub (same content, additional interface).
+Using the OGC API endpoint hierarchy provides the key benefit that OGC API users do not need to learn a different, additional approach or hierarchy for PubSub (same content, additional interface).
 
 === AsyncAPI
 
@@ -109,7 +109,7 @@ Following the recommendations of the PubSub White Paper, AsyncAPI provides an ev
 
 === Providing notification metadata as an OGC API endpoint
 
-For Brokers providing notification metadata (as opposed to actual data payloads), an OGC API can, in parallel, easily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Provoding message payloads via OGC API provides the additional benefit of querying for past messages over time in case of a lost connection.
+For Brokers providing notification metadata (as opposed to actual data payloads), an OGC API can, in parallel, easily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Providing message payloads via an OGC API provides the additional benefit of querying for past messages over time in case of a lost connection.
 
 === Providing PubSub links to collection updates
 
