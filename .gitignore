@@ -4,5 +4,6 @@ document.html
 document.presentation.xml
 document.xml
 document.xml.abort
+document_*_files/
 iev
 relaton
