@@ -48,11 +48,11 @@ For Brokers providing notification metadata (as opposed to actual data payloads)
     "type": "application/json",
     "title": "Data notifications",
     "href": "mqtts://example.org",
-    "topic": "collections"
+    "channel": "collections"
 }
 ----
 
-.OGC API PubSub link example to collection notifications
+.OGC API PubSub link example to collection item notifications
 [source,json]
 ----
 {
@@ -60,7 +60,7 @@ For Brokers providing notification metadata (as opposed to actual data payloads)
     "type": "application/json",
     "title": "Data notifications",
     "href": "mqtts://example.org",
-    "topic": "collections/{collectionId}"
+    "channel": "collections/{collectionId}"
 }
 ----
 
@@ -94,7 +94,7 @@ TODO: expand
 * Protocol: any protocol (MQTT, AMQP, etc.)
 * Message payload: GeoJSON as metadata, or actual data
 * AsyncAPI: link object in OGC API landing page response ``links`` section
-* Topic hierarchy / OGC API integration: use OGC API endpoints as topics, link objects and rels in collection metadata
+* Topic hierarchy / OGC API integration: use OGC API endpoints as channels, link objects and rels in collection metadata
 
 == WMO WIS2 implementation
 
@@ -114,6 +114,7 @@ Key core protocols and encodings of WIS2 are identified below:
 A draft architecture is illustrated below, exemplifying the PubSub interactions between WIS2 Nodes and the Global Broker (a WIS2 global service).
 
 image::https://github.com/opengeospatial/MetOceanDWG/blob/pubsub-dp-bootstrap/PubSub_Draft/images/wis2.c4.container.png[WIS2 Architecture C4 container diagram]
+
 
 === Protocols and Message Queuing Protocol (MQP) Brokers
 
