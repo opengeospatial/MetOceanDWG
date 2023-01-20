@@ -16,7 +16,7 @@ An entity that creates a subscription to a Publisher.
 
 A container within which data (such as JSON, XML, binary data, or other content) is transported. Messages may include additional information beyond data, including headers or other metadata used for routing or security purposes.
 
-=== Topic
+=== Channel
 
 A term (string) used to filter messages from a Broker.
 
