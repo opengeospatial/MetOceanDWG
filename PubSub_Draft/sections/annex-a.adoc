@@ -14,16 +14,16 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specific
         title: AsyncAPI demo
         version: '0.0.1'
         description: |
-            AsyncAPI description of the proposed Pub/Sub functionality.
+            AsyncAPI description of the proposed PubSub functionality
         contact:
             name: Contact Name
             email: you@example.org
 
     servers:
         mqtt_prod:
-            url: demo.server.org
+            url: example.org
             protocol: mqtt
-            description: MQTT end point
+            description: MQTT endpoint
             security:
                 - user-password: []
     defaultContentType: application/json
@@ -53,7 +53,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specific
     components:
         messages:
             collection_msg:
-                description: collection updated notification.  
+                description: collection updated notification
                 payload:
                     type: object
                     required:
@@ -72,7 +72,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specific
                             format: uri
                             description: URL of the changed collection               
             wthr_stn_msg:
-                description: An observation formatted as GeoJSON.
+                description: An observation formatted as GeoJSON
                 payload:
                     type: object
                     additionalProperties: false
@@ -121,7 +121,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specific
                                     type: number
                                     format: float
             stream_gage_msg:
-                description: Monitoring station data formatted as GeoJSON.
+                description: Monitoring station data formatted as GeoJSON
                 payload:
                     type: object
                     additionalProperties: false
@@ -185,7 +185,7 @@ Breaking down into the components:
         title: AsyncAPI demo
         version: '0.0.1'
         description: |
-            AsyncAPI description of the proposed Pub/Sub functionality.
+            AsyncAPI description of the proposed Pub/Sub functionality
         contact:
             name: Contact Name
             email: you@example.org
@@ -199,10 +199,10 @@ Breaking down into the components:
 ----
     servers:
         mqtt_prod:
-            url: demo.server.org
+            url: example.org
             protocol: mqtt
             protocolVersion: 3.1.1
-            description: MQTT end point
+            description: MQTT endpoint
             security:
                 - user-password: []
 
