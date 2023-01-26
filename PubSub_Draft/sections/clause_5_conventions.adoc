@@ -5,6 +5,6 @@ This section provides details and examples for any conventions used in the docum
 === Identifiers
 The normative provisions in this document are denoted by the URI
 
-`https://schemas.opengis.net/pubsub/1.0/`
+`http://www.opengis.net/spec/ogcapi-pubsub/1.0`
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
