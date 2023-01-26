@@ -17,7 +17,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specific
             AsyncAPI description of the proposed Pub/Sub functionality.
         contact:
             name: Contact Name
-            email: demo@example.api
+            email: you@example.org
 
     servers:
         mqtt_prod:
