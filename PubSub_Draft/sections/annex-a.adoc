@@ -2,7 +2,7 @@
 == Examples (Informative)
 
 [[async-examples]]
-=== Pub/Sub API Description Example
+=== PubSub API Description Example
 
 The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specification] and an example response can be found below:
 
