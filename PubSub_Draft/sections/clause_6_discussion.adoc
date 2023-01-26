@@ -78,11 +78,11 @@ A link to the PubSub definition document for the service MUST be provided on the
 
 === Protocols and Interoperability
 
-An OGC API - PubSub standard SHOULD not proscribe a protocol, AsyncAPI (or equivalent technology) would be utilised to describe the interfaces supported by a service in order to enable interoperability.  
+An OGC API - PubSub standard SHOULD not prescribe a protocol, AsyncAPI (or equivalent technology) would be utilized to describe the interfaces supported by a service in order to enable interoperability.  
 
 === Message payloads
 
-OGC API - PubSub standard SHOULD not proscribe a message payload, but all payload formats/schemas MUST be defined by the advertised definition API  
+OGC API - PubSub standard SHOULD not prescribe a message payload, but all payload formats/schemas MUST be defined by the advertised definition API  
 
 === Channel descriptions
 
@@ -94,7 +94,7 @@ TODO: expand
 * Protocol: any protocol (MQTT, AMQP, etc.)
 * Message payload: GeoJSON as metadata, or actual data
 * AsyncAPI: link object in OGC API landing page response ``links`` section
-* Topic hierarchy / OGC API integration: use OGC API endpoints as channels, link objects and rels in collection metadata
+* Topic hierarchy / OGC API integration: use the OGC API endpoint structure as channels, link objects and rels in collection metadata
 
 == WMO WIS2 implementation
 
