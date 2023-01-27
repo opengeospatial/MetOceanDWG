@@ -2,7 +2,7 @@
 == Examples (Informative)
 
 [[async-examples]]
-=== PubSub API Description Example
+=== Pub/Sub API Description Example
 
 The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specification] and an example response can be found below:
 
@@ -14,7 +14,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specific
         title: AsyncAPI demo
         version: '0.0.1'
         description: |
-            AsyncAPI description of the proposed PubSub functionality
+            AsyncAPI description of the proposed Pub/Sub functionality
         contact:
             name: Contact Name
             email: you@example.org
@@ -209,11 +209,11 @@ Breaking down into the components:
 ----
 ====
 * Each `server` object provides the following fields:
-    ** `url` URL of the target broker (this may be relative to the API document)
-    ** `protocol`  The Pub/Sub protocol supported by the server 
-    ** `protocolVersion`  The version Pub/Sub protocol supported by the server 
-    ** `description` String describing the host
-    ** `security` reference to the supported authentcation types
+    ** `url`: URL of the target broker (this may be relative to the API document)
+    ** `protocol`: Pub/Sub protocol supported by the server 
+    ** `protocolVersion`: version of the Pub/Sub protocol supported by the server 
+    ** `description`: string describing the host
+    ** `security`: reference to supported authentication types
 
 
 ====
@@ -243,7 +243,7 @@ Breaking down into the components:
 ----
 ====
 
-* The `channels` section lists the events a user can subscribe to and can provide a schema for the message payloads.
+* The `channels` section lists the events a user can subscribe to and can provide a schema for the associated message payloads.
 
 * In the example the following events can be subscribed to:
 
@@ -260,4 +260,4 @@ Breaking down into the components:
 ----
 ====
 
-* As in the OpenAPI specification the `components` section is used to define reusable objects for different aspects of the AsyncAPI specification.
+* As in the OpenAPI specification, the `components` section is used to define reusable objects for different aspects of the AsyncAPI specification.

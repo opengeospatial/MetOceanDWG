@@ -10,4 +10,6 @@
 |2023-01-19 |0.2.2 |M. Burgoyne|all | editorial changes
 |2023-01-21 |0.2.3 |S. Olson/S. Mill|all | editorial changes
 |2023-01-25 |0.3 |M. Burgoyne|all | added annex
+|2023-01-25 |0.3 |M. Burgoyne|all | added annex
+|2023-01-26 |0.3 |T. Kralidis|all | updates based on MetOceanDWG 2022-01-26 meeting
 |===
