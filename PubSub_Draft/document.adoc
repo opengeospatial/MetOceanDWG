@@ -28,7 +28,7 @@
 :comment: ### Role of the authors; mandatory
 :role: editor
 :comment: ### Comma delimited keywords; mandatory
-:keywords: OGC API, PubSub, Publish, Subscribe, Publish-Subscribe, Event driven architecture, Asynchronous, OGC document, OGC
+:keywords: OGC API, Pub/Sub, Publish, Subscribe, Publish-Subscribe, Event driven architecture, Asynchronous, OGC document, OGC
 :comment: ### Semicolon-delimited list of the submitting organizations; mandatory
 :submitting-organizations: Meteorological Service of Canada; UK Met Office; US National Weather Service;
 :comment: ### Metanorma flavor; mandatory
