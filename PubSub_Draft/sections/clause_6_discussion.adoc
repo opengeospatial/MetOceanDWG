@@ -78,6 +78,8 @@ An OGC API - Pub/Sub standard can provide the below requirements, recommendation
 
 === API conformance
 
+It is appropriate to add a conformance class to describe that the service supports PubSub with reference to the specification that it uses to define the functionality. In doing so, we define the requirements class and the conformance class with a set of conformance tests covering a variety of protocol options that ensure compliance with the standard. 
+
 An OGC API server SHALL provide a mechanism to define the protocols and message schemas it supports, following the convention in the use of OpenAPI to describe OGC API's, as well as the `/conformance` endpoint.  An API SHALL NOT mandate any encoding or format for the formal definition of the API. This approach has allowed OGC API's to take advantage of industry best practices for describing functionality.  At the time of writing, AsyncAPI can be defined as the preferred option.
 
 === API definition
