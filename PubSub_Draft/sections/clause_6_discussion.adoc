@@ -48,11 +48,13 @@ For Brokers providing notification metadata (as opposed to actual data payloads)
 
 === Providing Pub/Sub links to collection updates
 
+The links array could also provide references to the Pub/Sub capabilities available on the service, a *collection* link could reference a collection update notification channel.
+
 .OGC API Pub/Sub link example to new collection notifications
 [source,json]
 ----
 {
-    "rel": "collections",
+    "rel": "collection",
     "type": "application/json",
     "title": "Data notifications",
     "href": "mqtts://example.org",
@@ -60,7 +62,11 @@ For Brokers providing notification metadata (as opposed to actual data payloads)
 }
 ----
 
+An *items* link could reference a data payload channel
+
 .OGC API Pub/Sub link example to collection item notifications
+
+OGC API - Features example
 [source,json]
 ----
 {
@@ -71,6 +77,19 @@ For Brokers providing notification metadata (as opposed to actual data payloads)
     "channel": "collections/{collectionId}"
 }
 ----
+
+OGC API - EDR example
+[source,json]
+----
+{
+    "rel": "items",
+    "type": "application/json",
+    "title": "Data notifications",
+    "href": "mqtts://example.org",
+    "channel": "collections/{collectionId}/items"
+}
+----
+
 
 == Recommendations for an OGC API - Pub/Sub standard
 
