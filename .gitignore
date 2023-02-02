@@ -1,5 +1,6 @@
 document.doc
-document.err
+document.pdf
+document.*err
 document.html
 document.presentation.xml
 document.xml
