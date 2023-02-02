@@ -3,51 +3,32 @@
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-[NOTE]
-====
-Insert References here. If there are no references, leave this section empty.
+* [[[IANALinkRelations,IANA Link Relations]]], _IANA Link Relations_ https://www.iana.org/assignments/link-relations/link-relations.xhtml
 
-References are to follow the Springer LNCS style, with the exception that optional information may be appended to references: DOIs are added after the date and web resource references may include an access date at the end of the reference in parentheses. See examples from Springer and OGC below.
-====
+* [[[OGC13-131r1,OGC 13-131r1]]], _OGC Publish/Subscribe Interface Standard 1.0 - Core_ (2020)
 
-* [[[Smith81,Identification of Common Molecular Subsequences]]],
-_Identification of Common Molecular Subsequences_.
-Smith, T.F., Waterman, M.S., J. Mol. Biol. 147, 195–197 (1981)
+* [[[OGC20-046,OGC 20-046]]], _OGC Publish-Subscribe White Paper_ (2020)
 
-* [[[May06,ZIB Structure Prediction Pipeline]]],
-_ZIB Structure Prediction Pipeline: Composing a Complex Biological Workflow through Web Services_.
-May, P., Ehrlich, H.C., Steinke, T. In: Nagel, W.E., Walter,
-W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128, pp. 1148–1158. Springer,
-Heidelberg (2006)
+* [[[OGC19-086r5,OGC 19-086r5]]], _OGC API - Environmental Data Retrieval Standard_ (2022)
 
-* [[[Grid,The Grid]]], _The Grid: Blueprint for a New Computing Infrastructure._,
-Foster, I., Kesselman, C.. Morgan Kaufmann, San Francisco (1999).
+* [[[OGC17-069r4,OGC 17-069r4]]], _OGC API - Features - Part 1: Core corrigendum_ (2022)
 
-* [[[Czajkowski01,Grid Information Services for Distributed Resource Sharing]]],
-_Grid Information Services for Distributed Resource Sharing._
-Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C. In: 10th IEEE International Symposium on High
-Performance Distributed Computing, pp. 181–184. IEEE Press, New York (2001)
+* [[[OGC20-004,OGC 20-004]]], _DRAFT OGC API - Records - Part 1: Core_ (2020)
 
-* [[[Foster02,The Physiology of the Grid]]],
-_The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration._
-Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Forum (2002)
+* [[[RFC7946,RFC 7946]]], _GeoJSON_, https://www.rfc-editor.org/rfc/rfc7946
 
-* [[[NCBI,NCBI]]], _National Center for Biotechnology Information_, http://www.ncbi.nlm.nih.gov
+* [[[AMQP10,AMQP v1.0]]], _Advanced Message Queueing Protocol (AMQP) v1.0)_ https://www.oasis-open.org/standard/amqp
 
-* [[[ISO19101-1,ISO 19101-1:2014]]], Geographic information -- Reference model -- Part 1: Fundamentals
+* [[[MQTT311,MQTT v3.1.1]]], _MQTT Version 3.1.1 Plus Errata 01_ https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html
 
-* [[[ISO19115-1,ISO 19115-1:2014]]], _Geographic information -- Metadata -- Part 1: Fundamentals_
+* [[[MQTT50,MQTT v5.0]]], _MQTT Version 5.0_ https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
 
-* [[[ISO19157,ISO 19157:2013]]], _Geographic information -- Data quality_
+* [[[AsyncAPI250,AsyncAPI 2.5.0]]], _AsyncAPI Specification_ https://www.asyncapi.com/docs/reference/specification/v2.5.0
 
-* [[[ISO19139,ISO 19139:2007]]], _Geographic information -- Metadata -- XML schema implementation_
+* [[[WIS2Guide,WMO WIS2 Guide]]], _Draft guidance on technical specifications of WIS 2.0_ https://wmoomm.sharepoint.com/sites/wmocpdb/eve_activityarea/Forms/AllItems.aspx?id=%2Fsites%2Fwmocpdb%2Feve%5Factivityarea%2FWMO%20Information%20System%20%28WIS%29%5F6cf41395%2D0ffc%2Dea11%2Da813%2D000d3aafe55d%2Fdocs%20shared%20on%20community%20site%2FWIS%202%2E0%20Guidance%2FGuidance%20on%20technical%20specification%20of%20WIS2%2Dv2%2Epdf&parent=%2Fsites%2Fwmocpdb%2Feve%5Factivityarea%2FWMO%20Information%20System%20%28WIS%29%5F6cf41395%2D0ffc%2Dea11%2Da813%2D000d3aafe55d%2Fdocs%20shared%20on%20community%20site%2FWIS%202%2E0%20Guidance&p=true&ga=1
 
-* [[[ISO19115-3,ISO 19115-3]]], _Geographic information -- Metadata -- Part 3: XML schemas_ (2016)
+* [[[WMO-WNM,WNM]]], _DRAFT WMO WIS2 Notification Message_ https://github.com/wmo-im/wis2-notification-message
 
-* [[[OGC15-097,OGC 15-097]]], _OGC Geospatial User Feedback Standard: Conceptual Model_ (2016)
+* [[[WMO-TOPICS,WMO-TOPICS]]], _DRAFT WMO WIS2 Topic Hierarchy_ https://github.com/wmo-im/wis2-topic-hierarchy
 
-* [[[OGC12-019,OGC 12-019]]], _OGC City Geography Markup Language (CityGML) Encoding Standard_ (2012)
-
-* [[[OGC14-005r3,OGC 14-005r3]]], _OGC IndoorGML_ (2014)
-
-* [[[OGC06-121r9,OGC 06-121r9]]], _OGC Web Service Common Implementation Specification_, April 7, 2010. http://portal.opengeospatial.org/files/?artifact_id=38867
+* [[[WebSockets,WebSockets]]], _WebSockets_ https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API

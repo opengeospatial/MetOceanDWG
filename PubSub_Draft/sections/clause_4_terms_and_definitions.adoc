@@ -4,14 +4,57 @@ This document uses the terms defined in Sub-clause 5.3 of <<OGC06-121r9>>, which
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-=== example term
+=== Broker
 
-term used for exemplary purposes
+Intermediary between Subscribers and other Publishers which have been previously registered with the Broker. The Broker is not the original producer of Messages, but acts as an intermediary, (re-)publishing messages received from other Publishers and decoupling them from their Subscribers.
 
-[.source]
-<<ISO19101-1>>
+=== Subscriber
 
-NOTE: An example note.
+An entity that creates a subscription to a Publisher.
 
-[example]
-Here's an example of an example term.
+=== Message
+
+A container within which data (such as JSON, XML, binary data, or other content) is transported. Messages may include additional information beyond data, including headers or other metadata used for routing or security purposes.
+
+=== Channel
+
+A term (string) used to filter messages from a Broker.
+
+=== Abbreviated terms
+
+AMQP::
+  Advanced Message Queuing Protocol
+AMQPS::
+  Advanced Message Queuing Protocol Secure
+API::
+  Application Programming Interface
+CORS::
+  Cross-Origin Resource Sharing
+GeoJSON::
+   Geospatial JavaScript Object Notation (JSON)
+HTTP::
+  Hypertext Transfer Protocol
+HTTPS::
+  Hypertext Transfer Protocol Secure
+IANA::
+  Internet Assigned Numbers Authority
+JSON::
+  JavaScript Object Notation
+MQP::
+  Message Queuing Protocol
+MQTT::
+  Message Queuing Telemetry Transport 
+MQTTS::
+  Message Queuing Telemetry Transport Secure
+OASIS::
+  Organization for the Advancement of Structured Information Standards 
+OGC::
+  Open Geospatial Consortium
+URI::
+  Uniform Resource Identifier
+WIS::
+  WMO Information System
+WMO::
+  World Meteorological Organization
+YAML::
+  YAML Ain't Markup Language
