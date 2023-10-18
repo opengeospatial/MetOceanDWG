@@ -191,7 +191,7 @@ Breaking down into the components:
             email: you@example.org
 ----
 ====
-* The `asyncapi` field indicates you use the AsyncAPI version 2.5.0.
+* The `asyncapi` field indicates the user should use the AsyncAPI version 2.5.0.
 * The `info` field holds information about the API, such as its name, version, description, and license.
 
 ====
@@ -209,11 +209,11 @@ Breaking down into the components:
 ----
 ====
 * Each `server` object provides the following fields:
-    ** `url`: URL of the target broker (this may be relative to the API document)
-    ** `protocol`: Pub/Sub protocol supported by the server 
-    ** `protocolVersion`: version of the Pub/Sub protocol supported by the server 
-    ** `description`: string describing the host
-    ** `security`: reference to supported authentication types
+    ** `url`: URL of the target broker (this may be relative to the API document);
+    ** `protocol`: Pub/Sub protocol supported by the server; 
+    ** `protocolVersion`: version of the Pub/Sub protocol supported by the server; 
+    ** `description`: string describing the host; and
+    ** `security`: reference to supported authentication types.
 
 
 ====

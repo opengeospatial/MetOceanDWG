@@ -2,7 +2,7 @@
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :doctype: discussion-paper
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:status: draft
+:status: approved
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Iteration of the document draft in X.Y format; optional. If present, reviewer notes will be shown in output (for more information visit https://www.metanorma.org/author/topics/document-format/reviewer-notes/)
@@ -12,11 +12,11 @@
 :comment: ### Internal reference number; mandatory
 :docnumber: 23-013
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2022-12-20
+:received-date: 2023-02-02
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2019-02-28
+:issued-date: 2023-06-08
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2019-12-11
+:published-date: YYYY-MM-DD
 :comment: ### Author one
 :fullname: Tom Kralidis
 :comment: ### Author two
