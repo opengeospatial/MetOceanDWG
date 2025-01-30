@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TemporalCRS xmlns="http://www.opengis.net/gml/3.2"
              xmlns:xlink="http://www.w3.org/1999/xlink"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xmlns:gml="http://www.opengis.net/gml/3.2"
              xmlns:gmd="http://www.isotc211.org/2005/gmd"
              xmlns:gco="http://www.isotc211.org/2005/gco"
              xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0"
              xmlns:epsg="urn:x-ogp:spec:schema-xsd:EPSG:1.0:dataset"
+             xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/datums.xsd"
              gml:id="julian-date-crs">
   <description>Concrete temporal CRS of days elapsed from 24-Nov-4714 BC (12h00 UTC), proleptic Gregorian calendar.</description>
   <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/crs/OGC/0/JulianDate</identifier>
