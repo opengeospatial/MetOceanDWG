@@ -38,7 +38,7 @@
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%indexnd-td-corner%</identifier>
       <remarks>Version 0.2</remarks>
       <scope>For referencing cells in a one-dimensional grid.</scope>
-      <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/pixelInCell/OGC/1.0/cellCenter</pixelInCell>
+      <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/pixelInCell/OGC/1.0/cellCorner</pixelInCell>
     </ImageDatum>
   </imageDatum>
 </ImageCRS>
