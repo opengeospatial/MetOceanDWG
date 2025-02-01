@@ -10,7 +10,7 @@
           xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/datums.xsd"
           gml:id="index2d-crs">
   <description>CRS for 2D index-domain referenced axis.</description>
-  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/crs/OGC/0/Index2D</identifier>
+  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/Index2D</identifier>
   <name>2D Index CRS</name>
   <remarks>Version 0.2</remarks>
   <scope>not known</scope>
@@ -20,21 +20,21 @@
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%cartesian2D%</identifier>
       <remarks>Version 0.2</remarks>
       <axis>
-        <CoordinateSystemAxis gml:id="index2d-crs_cartesian2D_index-cs_2D_1" uom="https://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+        <CoordinateSystemAxis gml:id="index2d-crs_cartesian2D_index-cs_2D_1" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
           <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%index-cs%</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>i</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/0/indexedAxisPositive</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
         </CoordinateSystemAxis>
       </axis>
       <axis>
-        <CoordinateSystemAxis gml:id="index2d-crs_cartesian2D_index-cs_2D_2" uom="https://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+        <CoordinateSystemAxis gml:id="index2d-crs_cartesian2D_index-cs_2D_2" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
           <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%index-cs%</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>j</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/0/indexedAxisPositive</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
         </CoordinateSystemAxis>
       </axis>
     </CartesianCS>
@@ -47,7 +47,7 @@
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%indexnd-td-corner%</identifier>
       <remarks>Version 0.2</remarks>
       <scope>not known</scope>
-      <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/pixelInCell/OGC/1.0/cellCenter</pixelInCell>
+      <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/pixelInCell/OGC/1.0/cellCenter</pixelInCell>
     </ImageDatum>
   </imageDatum>
 </ImageCRS>

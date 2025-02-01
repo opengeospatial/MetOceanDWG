@@ -10,7 +10,7 @@
              xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/datums.xsd"
              gml:id="julian-date-crs">
   <description>Concrete temporal CRS of days elapsed from 24-Nov-4714 BC (12h00 UTC), proleptic Gregorian calendar.</description>
-  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/crs/OGC/0/JulianDate</identifier>
+  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/JulianDate</identifier>
   <name>Julian Date</name>
   <remarks>Version 0.2</remarks>
   <scope>not known</scope>
@@ -20,12 +20,12 @@
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%days-cs%</identifier>
       <remarks>Version 0.2</remarks>
       <axis>
-        <CoordinateSystemAxis gml:id="julian-date-crs_days-cs_day" uom="https://www.opengis.net/def/uom/UCUM/0/d">
+        <CoordinateSystemAxis gml:id="julian-date-crs_days-cs_day" uom="http://www.opengis.net/def/uom/UCUM/0/d">
           <description>Coordinate system axis for the recording of days [d].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%day%</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>jd</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
         </CoordinateSystemAxis>
       </axis>
     </TimeCS>

@@ -10,7 +10,7 @@
              xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/datums.xsd"
              gml:id="unix-time-crs">
   <description>Concrete temporal CRS of seconds elapsed from 1-Jan-1970 (00h00 UTC).</description>
-  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/crs/OGC/0/UnixTime</identifier>
+  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/UnixTime</identifier>
   <name>Unix Time</name>
   <name>POSIX Time</name>
   <remarks>Version 0.2</remarks>
@@ -21,12 +21,12 @@
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%seconds-cs%</identifier>
       <remarks>Version 0.2</remarks>
       <axis>
-        <CoordinateSystemAxis gml:id="second" uom="https://www.opengis.net/def/uom/UCUM/0/s">
+        <CoordinateSystemAxis gml:id="second" uom="http://www.opengis.net/def/uom/UCUM/0/s">
           <description>Coordinate system axis for the recording of seconds [s].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axis/OGC/0/seconds</identifier>
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/seconds</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>unix</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
         </CoordinateSystemAxis>
       </axis>
     </TimeCS>
