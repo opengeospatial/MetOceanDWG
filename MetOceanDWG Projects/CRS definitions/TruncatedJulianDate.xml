@@ -15,14 +15,14 @@
   <remarks>Version 0.2</remarks>
   <scope>For continuous count of days in astronomy and software applications.</scope>
   <timeCS>
-    <TimeCS gml:id="tr-julian-date-crs_days-cs">
+    <TimeCS gml:id="days-cs">
       <description>1D coordinate system containing a time axis measuring days [d].</description>
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%days-cs%</identifier>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/Days</identifier>
       <remarks>Version 0.2</remarks>
       <axis>
-        <CoordinateSystemAxis gml:id="tr-julian-date-crs_days-cs_day" uom="http://www.opengis.net/def/uom/UCUM/0/d">
+        <CoordinateSystemAxis gml:id="days-axis" uom="http://www.opengis.net/def/uom/UCUM/0/d">
           <description>Coordinate system axis for the recording of days [d].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%day%</identifier>
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/days</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>tjd</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
@@ -31,11 +31,11 @@
     </TimeCS>
   </timeCS>
   <temporalDatum>
-    <TemporalDatum gml:id="tr-julian-date-crs_tjd-td">
+    <TemporalDatum gml:id="truncated-julian-date-epoch">
       <description>
         Epoch time for the Truncated Julian Date (24-May-1968, 00h00 UTC).
       </description>
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%tjd-td%</identifier>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/datum/OGC/0.2/TruncatedJulianDateDatum</identifier>
       <remarks>Version 0.2</remarks>
       <scope>For continuous count of days in astronomy and software applications.</scope>
       <origin>1968-05-24T00:00:00Z</origin>

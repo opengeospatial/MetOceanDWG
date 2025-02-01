@@ -15,14 +15,14 @@
   <remarks>Version 0.2</remarks>
   <scope>For continuous count of days in astronomy and software applications.</scope>
   <timeCS>
-    <TimeCS gml:id="julian-date-crs_days-cs">
+    <TimeCS gml:id="days-cs">
       <description>1D coordinate system containing a time axis measuring days [d].</description>
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%days-cs%</identifier>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/Days</identifier>
       <remarks>Version 0.2</remarks>
       <axis>
-        <CoordinateSystemAxis gml:id="julian-date-crs_days-cs_day" uom="http://www.opengis.net/def/uom/UCUM/0/d">
+        <CoordinateSystemAxis gml:id="days-axis" uom="http://www.opengis.net/def/uom/UCUM/0/d">
           <description>Coordinate system axis for the recording of days [d].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%day%</identifier>
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/days</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>jd</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
@@ -31,14 +31,14 @@
     </TimeCS>
   </timeCS>
   <temporalDatum>
-    <TemporalDatum gml:id="julian-date-crs_jd-td">
+    <TemporalDatum gml:id="julian-date-epoch">
       <description>
         The beginning of the Julian period (24-Nov-4714 BC, 12h00 UTC — proleptic Gregorian calendar).
         The origin date is expressed in the proleptic Gregorian calendar:
         it corresponds to 1-Jan-4713 BC in the proleptic Julian calendar.
         The year 0000 is not a valid year in the Gregorian calendar.
       </description>
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%jd-td%</identifier>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/datum/OGC/0.2/JulianDateDatum</identifier>
       <remarks>Version 0.2</remarks>
       <scope>For continuous count of days in astronomy and software applications.</scope>
       <origin>-4714-11-24T12:00:00Z</origin>

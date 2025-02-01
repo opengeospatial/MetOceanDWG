@@ -15,23 +15,23 @@
   <remarks>Version 0.2</remarks>
   <scope>For referencing cells in a two-dimensional grid.</scope>
   <cartesianCS>
-    <CartesianCS gml:id="index2d-crs_cartesian2D">
+    <CartesianCS gml:id="index2d-cs">
       <description/>
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%cartesian2D%</identifier>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/CartesianIndexed2D</identifier>
       <remarks>Version 0.2</remarks>
       <axis>
-        <CoordinateSystemAxis gml:id="index2d-crs_cartesian2D_index-cs_2D_1" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+        <CoordinateSystemAxis gml:id="indexed-axis-1" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
           <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%index-cs%</identifier>
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/indexed_1</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>i</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
         </CoordinateSystemAxis>
       </axis>
       <axis>
-        <CoordinateSystemAxis gml:id="index2d-crs_cartesian2D_index-cs_2D_2" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+        <CoordinateSystemAxis gml:id="indexed-axis-2" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
           <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%index-cs%</identifier>
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/indexed_2</identifier>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>j</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
@@ -40,11 +40,11 @@
     </CartesianCS>
   </cartesianCS>
   <imageDatum>
-    <ImageDatum gml:id="index2d-crs_indexnd-td-corner">
+    <ImageDatum gml:id="cell-corner-datum">
       <description>
         A general nD image datum with the origin at the lower bound of the origin cell in the axis.
       </description>
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%indexnd-td-corner%</identifier>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/datum/OGC/0.2/CellCorner</identifier>
       <remarks>Version 0.2</remarks>
       <scope>For referencing cells in a two-dimensional grid.</scope>
       <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/pixelInCell/OGC/1.0/cellCorner</pixelInCell>
