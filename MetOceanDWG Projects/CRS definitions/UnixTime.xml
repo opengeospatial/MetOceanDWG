@@ -14,7 +14,7 @@
   <name>Unix Time</name>
   <name>POSIX Time</name>
   <remarks>Version 0.2</remarks>
-  <scope>not known</scope>
+  <scope>For continuous count of seconds in software applications.</scope>
   <timeCS>
     <TimeCS gml:id="unix-time-crs_seconds-cs">
       <description>1D coordinate system containing a time axis measuring seconds [s].</description>
@@ -38,7 +38,7 @@
       </description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%unix-td%</identifier>
       <remarks>Version 0.2</remarks>
-      <scope>not known</scope>
+      <scope>For continuous count of seconds in software applications.</scope>
       <origin>1970-01-01T00:00:00Z</origin>
     </TemporalDatum>
   </temporalDatum>

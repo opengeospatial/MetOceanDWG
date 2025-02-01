@@ -13,7 +13,7 @@
   <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/JulianDate</identifier>
   <name>Julian Date</name>
   <remarks>Version 0.2</remarks>
-  <scope>not known</scope>
+  <scope>For continuous count of days in astronomy and software applications.</scope>
   <timeCS>
     <TimeCS gml:id="julian-date-crs_days-cs">
       <description>1D coordinate system containing a time axis measuring days [d].</description>
@@ -40,7 +40,7 @@
       </description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%jd-td%</identifier>
       <remarks>Version 0.2</remarks>
-      <scope>not known</scope>
+      <scope>For continuous count of days in astronomy and software applications.</scope>
       <origin>-4714-11-24T12:00:00Z</origin>
     </TemporalDatum>
   </temporalDatum>

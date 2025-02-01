@@ -13,7 +13,7 @@
   <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/Index4D</identifier>
   <name>4D Index CRS</name>
   <remarks>Version 0.2</remarks>
-  <scope>not known</scope>
+  <scope>For referencing cells in a four-dimensional grid.</scope>
   <cartesianCS>
     <CartesianCS gml:id="index4d-crs_cartesian4D">
       <description/>
@@ -64,7 +64,7 @@
       </description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%indexnd-td-corner%</identifier>
       <remarks>Version 0.2</remarks>
-      <scope>not known</scope>
+      <scope>For referencing cells in a four-dimensional grid.</scope>
       <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/pixelInCell/OGC/1.0/cellCenter</pixelInCell>
     </ImageDatum>
   </imageDatum>
