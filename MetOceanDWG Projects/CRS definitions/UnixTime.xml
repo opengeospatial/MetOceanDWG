@@ -13,18 +13,18 @@
   <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/crs/OGC/0/UnixTime</identifier>
   <name>Unix Time</name>
   <name>POSIX Time</name>
-  <remarks>Initial version (0.1)</remarks>
+  <remarks>Version 0.2</remarks>
   <scope>not known</scope>
   <timeCS>
     <TimeCS gml:id="unix-time-crs_seconds-cs">
       <description>1D coordinate system containing a time axis measuring seconds [s].</description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%seconds-cs%</identifier>
-      <remarks>Initial version (0.1)</remarks>
+      <remarks>Version 0.2</remarks>
       <axis>
         <CoordinateSystemAxis gml:id="second" uom="https://www.opengis.net/def/uom/UCUM/0/s">
           <description>Coordinate system axis for the recording of seconds [s].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axis/OGC/0/seconds</identifier>
-          <remarks>Initial version (0.1)</remarks>
+          <remarks>Version 0.2</remarks>
           <axisAbbrev>unix</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
         </CoordinateSystemAxis>
@@ -37,7 +37,7 @@
         Origin of Unix time (1-Jan-1970, 00h00 UTC).
       </description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%unix-td%</identifier>
-      <remarks>Initial version (0.1)</remarks>
+      <remarks>Version 0.2</remarks>
       <scope>not known</scope>
       <origin>1970-01-01T00:00:00Z</origin>
     </TemporalDatum>

@@ -12,18 +12,18 @@
   <description>CRS for 3D index-domain referenced axis.</description>
   <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/crs/OGC/0/Index3D</identifier>
   <name>3D Index CRS</name>
-  <remarks>Initial version (0.1)</remarks>
+  <remarks>Version 0.2</remarks>
   <scope>not known</scope>
   <cartesianCS>
     <CartesianCS gml:id="index3d-crs_cartesian3D">
       <description/>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%cartesian3D%</identifier>
-      <remarks>Initial version (0.1)</remarks>
+      <remarks>Version 0.2</remarks>
       <axis>
         <CoordinateSystemAxis gml:id="index3d-crs_cartesian3D_index-cs_3D_1" uom="https://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
           <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%index-cs%</identifier>
-          <remarks>Initial version (0.1)</remarks>
+          <remarks>Version 0.2</remarks>
           <axisAbbrev>i</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/0/indexedAxisPositive</axisDirection>
         </CoordinateSystemAxis>
@@ -32,7 +32,7 @@
         <CoordinateSystemAxis gml:id="index3d-crs_cartesian3D_index-cs_3D_2" uom="https://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
           <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%index-cs%</identifier>
-          <remarks>Initial version (0.1)</remarks>
+          <remarks>Version 0.2</remarks>
           <axisAbbrev>j</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/0/indexedAxisPositive</axisDirection>
         </CoordinateSystemAxis>
@@ -41,7 +41,7 @@
         <CoordinateSystemAxis gml:id="index3d-crs_cartesian3D_index-cs_3D_3" uom="https://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
           <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%index-cs%</identifier>
-          <remarks>Initial version (0.1)</remarks>
+          <remarks>Version 0.2</remarks>
           <axisAbbrev>k</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/0/indexedAxisPositive</axisDirection>
         </CoordinateSystemAxis>
@@ -54,7 +54,7 @@
         A general nD image datum with the origin at the lower bound of the origin cell in the axis.
       </description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%indexnd-td-corner%</identifier>
-      <remarks>Initial version (0.1)</remarks>
+      <remarks>Version 0.2</remarks>
       <scope>not known</scope>
       <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/pixelInCell/OGC/1.0/cellCenter</pixelInCell>
     </ImageDatum>

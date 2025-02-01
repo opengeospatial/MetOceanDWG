@@ -12,18 +12,18 @@
   <description>Concrete temporal CRS of days elapsed from 24-Nov-4714 BC (12h00 UTC), proleptic Gregorian calendar.</description>
   <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/crs/OGC/0/JulianDate</identifier>
   <name>Julian Date</name>
-  <remarks>Initial version (0.1)</remarks>
+  <remarks>Version 0.2</remarks>
   <scope>not known</scope>
   <timeCS>
     <TimeCS gml:id="julian-date-crs_days-cs">
       <description>1D coordinate system containing a time axis measuring days [d].</description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%days-cs%</identifier>
-      <remarks>Initial version (0.1)</remarks>
+      <remarks>Version 0.2</remarks>
       <axis>
         <CoordinateSystemAxis gml:id="julian-date-crs_days-cs_day" uom="https://www.opengis.net/def/uom/UCUM/0/d">
           <description>Coordinate system axis for the recording of days [d].</description>
           <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%day%</identifier>
-          <remarks>Initial version (0.1)</remarks>
+          <remarks>Version 0.2</remarks>
           <axisAbbrev>jd</axisAbbrev>
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">https://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
         </CoordinateSystemAxis>
@@ -39,7 +39,7 @@
         The year 0000 is not a valid year in the Gregorian calendar.
       </description>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">%jd-td%</identifier>
-      <remarks>Initial version (0.1)</remarks>
+      <remarks>Version 0.2</remarks>
       <scope>not known</scope>
       <origin>-4714-11-24T12:00:00Z</origin>
     </TemporalDatum>
