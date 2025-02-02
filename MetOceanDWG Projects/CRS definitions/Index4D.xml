@@ -9,50 +9,50 @@
           xmlns:epsg="urn:x-ogp:spec:schema-xsd:EPSG:1.0:dataset"
           xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/datums.xsd"
           gml:id="index4d-crs">
-  <description>CRS for 4D index-domain referenced axis.</description>
+  <description>CRS for 4D index-domain referenced axes including elevation and time.</description>
   <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/Index4D</identifier>
-  <name>4D Index CRS</name>
+  <name>4D Index CRS including elevation and time</name>
   <remarks>Version 0.2</remarks>
-  <scope>For referencing cells in a four-dimensional grid.</scope>
+  <scope>For referencing cells in a four-dimensional grid of spatio-temporal data.</scope>
   <cartesianCS>
     <CartesianCS gml:id="index4d-cs">
-      <description/>
       <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/CartesianIndexed4D</identifier>
+      <name>Indexed 4D coordinate system: column, row, elevation, time</name>
       <remarks>Version 0.2</remarks>
       <axis>
-        <CoordinateSystemAxis gml:id="indexed-axis-1" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
-          <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/indexed_1</identifier>
+        <CoordinateSystemAxis gml:id="column-axis" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/column_index</identifier>
+          <name>Column index</name>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>i</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/columnPositive</axisDirection>
         </CoordinateSystemAxis>
       </axis>
       <axis>
-        <CoordinateSystemAxis gml:id="indexed-axis-2" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
-          <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/indexed_2</identifier>
+        <CoordinateSystemAxis gml:id="row-axis" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/row_index</identifier>
+          <name>Row index</name>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>j</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/rowPositive</axisDirection>
         </CoordinateSystemAxis>
       </axis>
       <axis>
-        <CoordinateSystemAxis gml:id="indexed-axis-3" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
-          <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/indexed_3</identifier>
+        <CoordinateSystemAxis gml:id="elevation-axis" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/elevation_index</identifier>
+          <name>Elevation index</name>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>k</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/up</axisDirection>
         </CoordinateSystemAxis>
       </axis>
       <axis>
-        <CoordinateSystemAxis gml:id="indexed-axis-4" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
-          <description>1D coordinate system with indexed coordinates [GridSpacing].</description>
-          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/indexed_4</identifier>
+        <CoordinateSystemAxis gml:id="time-index" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/time_index</identifier>
+          <name>Time index</name>
           <remarks>Version 0.2</remarks>
           <axisAbbrev>m</axisAbbrev>
-          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/0.2/indexedAxisPositive</axisDirection>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
         </CoordinateSystemAxis>
       </axis>
     </CartesianCS>
