@@ -14,9 +14,9 @@
   <name>4D Index CRS including elevation and time</name>
   <remarks>Version 0.2</remarks>
   <scope>For referencing cells in a four-dimensional grid of spatio-temporal data.</scope>
-  <cartesianCS>
-    <CartesianCS gml:id="index4d-cs">
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/CartesianIndexed4D</identifier>
+  <affineCS>
+    <AffineCS gml:id="index4d-cs">
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/Index4D</identifier>
       <name>Indexed 4D coordinate system: column, row, elevation, time</name>
       <remarks>Version 0.2</remarks>
       <axis>
@@ -55,8 +55,8 @@
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
         </CoordinateSystemAxis>
       </axis>
-    </CartesianCS>
-  </cartesianCS>
+    </AffineCS>
+  </affineCS>
   <imageDatum>
     <ImageDatum gml:id="cell-corner-datum">
       <description>

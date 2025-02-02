@@ -14,9 +14,9 @@
   <name>3D Index CRS including elevation</name>
   <remarks>Version 0.2</remarks>
   <scope>For referencing cells in a three-dimensional grid of spatial data.</scope>
-  <cartesianCS>
-    <CartesianCS gml:id="index3d-cs">
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/CartesianIndexed3D</identifier>
+  <affineCS>
+    <AffineCS gml:id="index3d-cs">
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/Index3D</identifier>
       <name>Indexed 3D coordinate system: column, row, elevation</name>
       <remarks>Version 0.2</remarks>
       <axis>
@@ -46,8 +46,8 @@
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/up</axisDirection>
         </CoordinateSystemAxis>
       </axis>
-    </CartesianCS>
-  </cartesianCS>
+    </AffineCS>
+  </affineCS>
   <imageDatum>
     <ImageDatum gml:id="cell-corner-datum">
       <description>

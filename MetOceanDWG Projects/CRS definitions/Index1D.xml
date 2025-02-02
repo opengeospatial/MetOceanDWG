@@ -14,9 +14,9 @@
   <name>1D Index CRS</name>
   <remarks>Version 0.2</remarks>
   <scope>For referencing cells in a one-dimensional grid.</scope>
-  <cartesianCS>
-    <CartesianCS gml:id="index1d-cs">
-      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/CartesianIndexed1D</identifier>
+  <affineCS>
+    <AffineCS gml:id="index1d-cs">
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/Index1D</identifier>
       <name>Indexed 1D coordinate system: column</name>
       <remarks>Version 0.2</remarks>
       <axis>
@@ -28,8 +28,8 @@
           <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/columnPositive</axisDirection>
         </CoordinateSystemAxis>
       </axis>
-    </CartesianCS>
-  </cartesianCS>
+    </AffineCS>
+  </affineCS>
   <imageDatum>
     <ImageDatum gml:id="cell-corner-datum">
       <description>
