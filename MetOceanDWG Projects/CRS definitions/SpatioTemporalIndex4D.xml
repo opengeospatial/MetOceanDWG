@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImageCRS xmlns="http://www.opengis.net/gml/3.2"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:gml="http://www.opengis.net/gml/3.2"
+          xmlns:gmd="http://www.isotc211.org/2005/gmd"
+          xmlns:gco="http://www.isotc211.org/2005/gco"
+          xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0"
+          xmlns:epsg="urn:x-ogp:spec:schema-xsd:EPSG:1.0:dataset"
+          xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/datums.xsd"
+          gml:id="spatio-temporal-index4d-crs">
+  <description>CRS for 4D index-domain referenced axes including elevation and time.</description>
+  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/SpatioTemporalIndex4D</identifier>
+  <name>4D Index CRS including elevation and time</name>
+  <remarks>Version 0.2</remarks>
+  <scope>For referencing cells in a four-dimensional grid of spatio-temporal data.</scope>
+  <affineCS>
+    <AffineCS gml:id="spatio-temporal-index4d-cs">
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/SpatioTemporalIndex4D</identifier>
+      <name>Indexed 4D coordinate system: column, row, elevation, time</name>
+      <remarks>Version 0.2</remarks>
+      <axis>
+        <CoordinateSystemAxis gml:id="column-axis" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/column_index</identifier>
+          <name>Column index</name>
+          <remarks>Version 0.2</remarks>
+          <axisAbbrev>i</axisAbbrev>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/columnPositive</axisDirection>
+        </CoordinateSystemAxis>
+      </axis>
+      <axis>
+        <CoordinateSystemAxis gml:id="row-axis" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/row_index</identifier>
+          <name>Row index</name>
+          <remarks>Version 0.2</remarks>
+          <axisAbbrev>j</axisAbbrev>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/rowPositive</axisDirection>
+        </CoordinateSystemAxis>
+      </axis>
+      <axis>
+        <CoordinateSystemAxis gml:id="elevation-axis" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/elevation_index</identifier>
+          <name>Elevation index</name>
+          <remarks>Version 0.2</remarks>
+          <axisAbbrev>k</axisAbbrev>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/up</axisDirection>
+        </CoordinateSystemAxis>
+      </axis>
+      <axis>
+        <CoordinateSystemAxis gml:id="time-index" uom="http://www.opengis.net/def/uom/OGC/1.0/GridSpacing">
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/time_index</identifier>
+          <name>Time index</name>
+          <remarks>Version 0.2</remarks>
+          <axisAbbrev>m</axisAbbrev>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
+        </CoordinateSystemAxis>
+      </axis>
+    </AffineCS>
+  </affineCS>
+  <imageDatum>
+    <ImageDatum gml:id="cell-corner-datum">
+      <description>
+        A general nD image datum with the origin at the lower bound of the origin cell in the axis.
+      </description>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/datum/OGC/0.2/CellCorner</identifier>
+      <remarks>Version 0.2</remarks>
+      <scope>For referencing cells in a four-dimensional grid.</scope>
+      <pixelInCell codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/pixelInCell/OGC/1.0/cellCorner</pixelInCell>
+    </ImageDatum>
+  </imageDatum>
+</ImageCRS>

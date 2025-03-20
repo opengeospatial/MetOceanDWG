@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TemporalCRS xmlns="http://www.opengis.net/gml/3.2"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:gml="http://www.opengis.net/gml/3.2"
+             xmlns:gmd="http://www.isotc211.org/2005/gmd"
+             xmlns:gco="http://www.isotc211.org/2005/gco"
+             xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0"
+             xmlns:epsg="urn:x-ogp:spec:schema-xsd:EPSG:1.0:dataset"
+             xsi:schemaLocation = "http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/datums.xsd"
+             gml:id="tr-julian-date-crs">
+  <description>Concrete temporal CRS of days elapsed from 24-May-1968 (00h00 UTC).</description>
+  <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/crs/OGC/0.2/TruncatedJulianDate</identifier>
+  <name>Truncated Julian Date</name>
+  <remarks>Version 0.2</remarks>
+  <scope>For continuous count of days in astronomy and software applications.</scope>
+  <timeCS>
+    <TimeCS gml:id="days-cs">
+      <description>1D coordinate system containing a time axis measuring days [d].</description>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/cs/OGC/0.2/Days</identifier>
+      <remarks>Version 0.2</remarks>
+      <axis>
+        <CoordinateSystemAxis gml:id="days-axis" uom="http://www.opengis.net/def/uom/UCUM/0/d">
+          <description>Coordinate system axis for the recording of days [d].</description>
+          <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axis/OGC/0.2/days</identifier>
+          <remarks>Version 0.2</remarks>
+          <axisAbbrev>tjd</axisAbbrev>
+          <axisDirection codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/axisDirection/OGC/1.0/future</axisDirection>
+        </CoordinateSystemAxis>
+      </axis>
+    </TimeCS>
+  </timeCS>
+  <temporalDatum>
+    <TemporalDatum gml:id="truncated-julian-date-epoch">
+      <description>
+        Epoch time for the Truncated Julian Date (24-May-1968, 00h00 UTC).
+      </description>
+      <identifier codeSpace="http://www.ietf.org/rfc/rfc3986">http://www.opengis.net/def/datum/OGC/0.2/TruncatedJulianDateDatum</identifier>
+      <remarks>Version 0.2</remarks>
+      <scope>For continuous count of days in astronomy and software applications.</scope>
+      <origin>1968-05-24T00:00:00Z</origin>
+    </TemporalDatum>
+  </temporalDatum>
+</TemporalCRS>
