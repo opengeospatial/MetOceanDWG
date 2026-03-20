@@ -8,4 +8,4 @@
 
 ## EDR API
 
-- OGC API-EDR:Part 3 pydantic tooling to create a service profile
+- [OGC API Service Profile Builder - Pydantic tooling for creating OGC API Service Profiles ](OGC-API-Service-Profile-Builder.md)
