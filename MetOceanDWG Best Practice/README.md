@@ -7,3 +7,5 @@
 ## WCS
 
 ## EDR API
+
+- OGC API-EDR:Part 3 pydantic tooling to create a service profile
